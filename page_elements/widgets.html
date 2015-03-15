@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <link rel="stylesheet" href="/BasepackageHTML/css/style.css"/>
+</head>
+<body>
+
+	<div class="container">
+		<div class="row">
+			<section class="col-sm-12 main-col">
+				<div class="cms-content">
+					<p class="lead">Examples of 'widgets' (content elements) that can be used across site pages*</p>
+					<P><small>*N.B. see articles templates for comment cms-content elements e.g. blokquotes, lists, etc</small></P>							
+
+					<hr>
+
+					<h3>Select2 - stylable select lists</h3>
+					<p>Select2 JS plugin triggered by '.js-select'</p>
+					<select class="js-select select2" data-placeholder="This is a select2 example" tabindex="-1">
+						<option></option>
+						<option>one</option>
+						<option>two</option>
+						<option>three</option>
+					</select>
+
+					<hr>
+
+					<h3>Block with a background image and an opaque overlay</h3>
+					<p>N.B. background-image style is inline so it can be content managed</p>
+					<p>Uses classes 'block-background-image' & 'block-overlay' for styling</p>
+					<div class="block-background-image block-overlay" style="background-image: url('http://placehold.it/750x240');">
+						<div class="content">
+							<h3>Some content</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quis nisl tellus. Curabitur egestas ac urna non bibendum. Morbi tincidunt cursus ultrices. Suspendisse vel maximus libero, rutrum euismod nisi.</p>
+						</div>
+					</div>
+
+					<hr>
+
+					<h3>Block with full width image, an opaque overlay and vertically centered Text</h3>
+					<p>Trigger vertical align function using classes '.vertical-align' and '.content'</p>
+					<p>Uses classes '.block-overlay' & 'image-fullwidth' for styling</p>
+					<div class="vertical-align image-fullwidth block-overlay">
+						<img class="img-responsive" src="http://placehold.it/750x300" alt="" />
+						<div class="content text-center">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quis nisl tellus. Curabitur egestas ac urna non bibendum. Morbi tincidunt cursus ultrices. Suspendisse vel maximus libero, rutrum euismod nisi.</p>	
+						</div>
+					</div>
+
+					<h3>Common Sidebar Elements</h3>
+				</div><!-- /.cms-content-->					
+			</section>
+		</div>
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="widget sub-nav clearfix">
+					<h3>Sub Nav</h3>
+					<ul class="nav nav-stacked level-one">
+						<li class=""><a href="/about-us/test-images/">Test Images</a></li>
+						<li class=""><a href="/about-us/testimonials/">Testimonials</a></li>
+						<li class="active"><a href="/about-us/meet-the-team/">Meet The Team</a>
+							<ul class="nav nav-stacked level-two">
+								<li class=""><a href="/about-us/meet-the-team/">Meet The Team</a></li>
+								<li class=""><a href="/about-us/simple-store/">Simple Store</a></li>
+								<li class=""><a href="/about-us/galleries/">Galleries</a></li>
+							</ul>
+						</li>
+						<li class=""><a href="/about-us/simple-store/">Simple Store</a></li>
+						<li class=""><a href="/about-us/galleries/">Galleries</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="widget widget-featured clearfix">					
+					<img alt="" class="img-responsive" src="http://placehold.it/735x550" />    
+					<h3>Foreign Language Courses</h3>
+					<p>This is a text block and it can contain some text.</p>
+					<a class="link-corner" href="" class="">
+						<span>Read more<i class="fa fa-chevron-right"></i></span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+    <script src="/BasepackageHTML/scripts/plugins/require.js"></script>
+    <script>
+	    require(['/BasepackageHTML/scripts/app.js'], function () {
+	      
+	    })
+	 </script>
+</body>
+</html>

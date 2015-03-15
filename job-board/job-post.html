@@ -1,0 +1,552 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <link rel="stylesheet" href="/BasepackageHTML/css/style.css"/>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <ol itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="breadcrumb">
+                    <li><a itemprop="url" href="/"><span itemprop="title">Home</span></a></li>
+                    <li class="active">Page Title</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <section class="col-sm-8 main-col">
+       
+                <div class="cms-content">
+                    <h1 class="page-header">Job Post Title</h1>
+                </div>
+            
+                <form role="form" method="get" action="" id="job-search">
+
+                    <fieldset>
+                        <legend class="sr-only">Search Jobs</legend>                
+                        <div class="form-group">
+                            <div class="input-group">                    
+                                <input id="main-search-field" type="text" name="search" placeholder="Search jobs e.g. Manager" class="form-control">
+                                <span data-toggle="collapse" data-target="#toggle-search" class="input-group-addon"><i class="fa fa-chevron-down"></i></span>
+                            </div>
+                        </div>
+                
+                        <div id="toggle-search" class="collapse">                    
+                            <div class="row">                        
+                                <div class="form-group col-sm-4">
+                                    <label for="sector">Sector</label> 
+                                    <select class="form-control js-select" name="sector" multiple="multiple" data-placeholder="Select sector(s)">
+                                        <option value="">All Sectors</option>
+                                            <option value="1266" >Accountancy</option>
+                                            <option value="1267" >Admin and Secretarial</option>
+                                            <option value="1268" >Advertising and PR</option>
+                                            <option value="1269" >Aerospace</option>
+                                            <option value="1270" >Agriculture Fishing and Forestry</option>
+                                            <option value="1271" >Arts</option>
+                                            <option value="1272" >Automotive</option>
+                                            <option value="1273" >Banking</option>
+                                            <option value="1274" >Building and Construction</option>
+                                            <option value="1275" >Call Centre and Customer Service</option>
+                                            <option value="1276" >Consultancy</option>
+                                            <option value="1301" >Design and Creative</option>
+                                            <option value="1302" >Defence and Military</option>
+                                            <option value="1303" >Education and Training</option>
+                                            <option value="1304" >Electronics</option>
+                                            <option value="1305" >Engineering</option>
+                                            <option value="1306" >Fashion</option>
+                                            <option value="1307" >Financial Services</option>
+                                            <option value="1308" >Graduates and Trainees</option>
+                                            <option value="1309" >Health and Safety</option>
+                                            <option value="1310" >Hospitality and Catering</option>
+                                            <option value="1311" >Information Technology</option>
+                                    </select>              
+                                </div>
+                                <div class="form-group col-sm-4">
+                                    <label for="contract">Contract</label>
+                                    <select class="form-control js-select" name="contract" multiple="multiple" data-placeholder="Select contract type(s)">
+                                        <option value="">All Contract Types</option>
+                                            <option value="1278" >Permanent</option>
+                                            <option value="1279" >Contract</option>
+                                    </select>                           
+                                </div>
+                                <div class="form-group col-sm-4">
+                                    <label for="location">Location</label>
+                                    <select class="form-control js-select" name="location" multiple="multiple" data-placeholder="Select location(s)">
+                                        <option value="">All Locations</option>
+                                            <option value="1281" >London</option>
+                                            <option value="1282" >Liverpool</option>
+                                            <option value="1283" >Manchester</option>
+                                    </select>                             
+                                </div>
+                            </div>
+                                
+                            <div id="more-options" class="collapse row"> 
+                                <div class="form-group col-sm-4">
+                                    <label for="category">Category</label>
+                                    <select class="form-control js-select" name="category">
+                                        <option value="">All Categories</option>
+                                            <option value="1295" >Web Development</option>
+                                            <option value="1317" >Web Design</option>
+                                    </select>
+                                </div>                                               
+                                <div class="form-group col-sm-4">
+                                    <label for="salary">Salary</label>
+                                    <select class="form-control js-select" name="salary">
+                                        <option value="">All Salaries</option>
+                                            <option value="1286" >TBC</option>
+                                            <option value="1287" >Up to &#163;10,000</option>
+                                            <option value="1288" >&#163;10,001 - &#163;15,000</option>
+                                            <option value="1289" >&#163;15,001 - &#163;20,000</option>
+                                            <option value="1290" >&#163;20,001 - &#163;25,000</option>
+                                            <option value="1291" >&#163;25,001 - &#163;30,000</option>
+                                            <option value="1292" >&#163;30,001 - &#163;40,000</option>
+                                            <option value="1293" >&#163;40,001 - &#163;50,000</option>
+                                            <option value="1294" >Over &#163;50,000</option>
+                                    </select>                             
+                                </div>    
+                                
+                                <div class="form-group col-sm-4">
+                                    <label for="orderby">Order Results By</label>
+                                     <select class="form-control js-select" name="orderby" data-placeholder="Order results">
+                                            <option value="0") >Best Match</option>
+                                            <option value="1") selected="selected">Recently Added</option>
+                                            <option value="2") >Alphabetically</option>
+                                            <option value="3") >Ending Soon</option>
+                                            <option value="4") >Distance From You</option>
+                                    </select>    
+                                </div>
+                                                    
+                            </div>
+
+                            <div class="row">
+                                <div class="form-group col-sm-4">
+                                    <a data-toggle="collapse" data-target="#more-options">More search options</a>
+                                </div>
+                                <div class="form-group col-sm-4" id="geo-details">
+                                    <label for="mylocation">Your Location</label>
+                                    <input type="text" name="mylocation" id="user-location" class="form-control" placeholder="Enter your location" />
+                                    <input type="hidden" name="lat" id="user-latitude" value="">
+                                    <input type="hidden" name="lng" id="user-longitude" value="">
+                                </div>
+                                <div class="form-group col-sm-4">
+
+                                    <input type="hidden" name="pagesize" value="6" />
+
+                                    <button class="btn btn-primary form-control" type="submit">Search</button>
+                                </div>
+                            </div>
+                            <hr />
+                        </div> 
+                    </fieldset>            
+                         
+                </form>
+
+
+                <div itemscope itemtype="http://schema.org/JobPosting" id="js-job-posting">
+                    <meta itemprop="name" content="Head of Development" />
+                    <meta itemprop="title" content="Head of Development" />
+                    <meta itemprop="url" content="http://basepackage.phusemarketing.co.uk/jobs-board/web-development/head-of-development/" />
+                    <meta itemprop="description" content="A head developer with management experience is sort for an immediate contract. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi luctus consectetur ornare. Fusce quam ipsum, vulputate vehicula placerat a, aliquam sit amet est. Quisque tincidunt consequat lacus at eleifend. Suspendisse…" />
+                    <meta itemprop="datePosted" content="2014-10-31" />
+                    <meta itemprop="industry" content="Web Development" />
+                    <meta itemprop="employmentType" content="Permanent" />
+                    <meta itemprop="baseSalary" content="25001" />
+                    <meta itemprop="salaryCurrency" content="GBP" />
+                    <meta itemprop="benefits" />
+
+    
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <p><strong>Ref:</strong> HDABC1</p>
+                            <p><strong>Date:</strong> 31 October 2014</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <p><strong>Category:</strong> Web Development</p>
+
+                            <p><strong>Location:</strong> Manchester</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <p><strong>Position:</strong> Permanent</p>
+                            <p><strong>Salary:</strong> &#163;25,001 - &#163;30,000 </p>
+                        </div>
+                    </div>
+
+                    <div class="cms-content">
+                        <h3>Details</h3>
+
+                        <p>A head developer with management experience is sort for an immediate contract. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi luctus consectetur ornare. Fusce quam ipsum, vulputate vehicula placerat a, aliquam sit amet est. Quisque tincidunt consequat lacus at eleifend. Suspendisse potenti. Nam felis diam, vulputate sit amet urna sit amet, tincidunt fermentum nisi.</p>
+                    </div>
+
+                    <h3><i class="fa fa-user"></i> Key Contact</h3>
+            
+                    <div class="media">
+                        <a href="#" class="photo media-left">
+                            <img src="https://placeimg.com/64/64/animals" itemprop="image" alt="alt" class="img-responsive media-object" />
+                        </a>
+                        <div class="media-body">
+                            <h4 class="media-heading">John Doe</h4>
+                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                        </div>
+                    </div>
+
+                    <h3>Map</h3>
+
+                    <div id="map-canvas" style="width:100%;height:400px; margin-bottom:10px"></div>
+    
+                    <div class="panel panel-default clearfix" style="display:none" id="map-panel">
+                        <div class="panel-body">
+                            <p><strong>Aproximate Distance From You</strong>: <span id="map-distance"></span> which would take around <span id="map-duration"></span> to drive.</p>
+                        </div>
+                    </div>
+
+                    <script>
+
+                        function initializeGoogleMap() {
+
+                            console.log("initializeGoogleMap");
+
+                            var jobLoc = new google.maps.LatLng(53.4807593,-2.24263050000002,6);
+
+                            directionsDisplay = new google.maps.DirectionsRenderer();
+                            var mapOptions = {
+                                zoom: 7,
+                                center: jobLoc
+                            };
+
+                            map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+                            var directions = false;
+
+                            if (navigator.geolocation) {
+
+                                directionsDisplay.setMap(map);
+
+                                navigator.geolocation.getCurrentPosition(function (position) {
+                                    var userLoc = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+                                    calcRoute(userLoc, jobLoc);
+                                    directions = true;
+
+                                });
+                            }
+
+                           if (!directions) {
+
+                                var marker = new google.maps.Marker({
+                                    position: jobLoc,
+                                    map: map,
+                                    title: 'Job Location'
+                                });
+                            }
+                        }
+
+                        function calcRoute(userLoc, jobLoc) {
+
+                            directionsService = new google.maps.DirectionsService();
+
+                            var start = userLoc;
+                            var end = jobLoc;
+
+                            var request = {
+                                origin: start,
+                                destination: end,
+                                travelMode: google.maps.TravelMode.DRIVING
+                            };
+
+                            directionsService.route(request, function (response, status) {
+                                if (status == google.maps.DirectionsStatus.OK) {
+
+                                    document.getElementById("map-distance").innerText = response.routes[0].legs[0].distance.text;
+                                    document.getElementById("map-duration").innerText = response.routes[0].legs[0].duration.text;
+                                    document.getElementById("map-panel").style.display = "block";
+
+                                    directionsDisplay.setDirections(response);
+                                }
+                            });
+                        }
+
+                    </script>
+
+                    <h3 id="apply-now">Application Form</h3>
+
+                    <form action="/#apply-now" enctype="multipart/form-data" method="post" role="form">    
+                        <div class="row"> 
+                            <div class="form-group col-sm-6 col-lg-4">
+                                <label class="control-label" for="FirstName">First Name <span class="required">*</span></label>
+                                <input class="form-control" data-val="true" data-val-required="The First Name field is required." id="FirstName" name="FirstName" type="text" value="" /> 
+                                <span class="field-validation-valid" data-valmsg-for="FirstName" data-valmsg-replace="true"></span>
+                            </div>
+                            <div class="form-group col-sm-6 col-lg-4">
+                                <label class="control-label" for="Surname">Surname <span class="required">*</span></label>
+                                <input class="form-control" data-val="true" data-val-required="The Surname field is required." id="Surname" name="Surname" type="text" value="" /> 
+                                <span class="field-validation-valid" data-valmsg-for="Surname" data-valmsg-replace="true"></span>
+                            </div>
+                            <div class="form-group col-sm-6  col-lg-4">
+                                <label class="control-label" for="EmailAddress">Email Address <span class="required">*</span></label>
+                                <input class="form-control" data-val="true" data-val-email="The Email Address field is not a valid e-mail address." data-val-required="The Email Address field is required." id="EmailAddress" name="EmailAddress" type="email" value="" /> 
+                                <span class="field-validation-valid" data-valmsg-for="EmailAddress" data-valmsg-replace="true"></span>
+                            </div>  
+                            <div class="form-group col-sm-6  col-lg-4">
+                                <label class="control-label" for="Telephone">Telephone <span class="required">*</span></label>
+                                <input class="form-control" data-val="true" data-val-required="The Telephone field is required." id="Telephone" name="Telephone" type="text" value="" /> 
+                                <span class="field-validation-valid" data-valmsg-for="Telephone" data-valmsg-replace="true"></span>
+                            </div> 
+                            <div class="form-group col-sm-12">
+                                <label class="control-label" for="CoverLetter">Cover Letter</label>
+                                <textarea class="form-control" cols="20" id="CoverLetter" name="CoverLetter" rows="3">
+                                </textarea>
+                                <span class="field-validation-valid" data-valmsg-for="CoverLetter" data-valmsg-replace="true"></span>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label class="control-label" for="Cv">CV</label>
+                                <input accept=".doc,.docx,.pdf,.rtf,.odt" class="form-control" id="Cv" name="Cv" type="file" value="" />
+                                <span class="field-validation-valid" data-valmsg-for="Cv" data-valmsg-replace="true"></span>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <div class="row">
+                                    <div class="col-md-12" style="height:30px; display:none" id="selected_file_details">
+                                        <div style="color:#666; font-size:smaller"><img width="16" height="16" alt="icon" id="selected_file_icon" /> <span id="selected_file_name" style="overflow:hidden"></span></div>
+                                    </div>
+                                    <div class="col-md-6" style="height:30px">
+                                        <div id="dropbox_cv"></div>
+                                    </div>
+                                    <div class="col-md-6" style="height:30px">
+                                        <button id="drive_choose_file" class="dropbox-dropin-btn dropbox-dropin-default" style="display: none; vertical-align:central"><img src="https://developers.google.com/drive/images/drive_icon.png" style="padding-left:3px; margin-right:6px;" width="16" height="16" />Choose from Google Drive</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-lg-12 hide">
+                            	<label for="HoneyPot">Ignore</label> 
+                                <input class="text-box single-line" data-val="true" data-val-range="Please leave this field blank." data-val-range-max="0" data-val-range-min="0" id="HoneyPot" name="HoneyPot" type="text" value="" /> 
+                                <span class="field-validation-valid" data-valmsg-for="HoneyPot" data-valmsg-replace="true"></span>
+                            </div>
+                            <input data-val="true" data-val-number="The field RedirectToPageId must be a number." data-val-required="The RedirectToPageId field is required." id="RedirectToPageId" name="RedirectToPageId" type="hidden" value="1336" />
+                            <input data-val="true" data-val-number="The field SenderPageId must be a number." data-val-required="The SenderPageId field is required." id="SenderPageId" name="SenderPageId" type="hidden" value="1417" />
+                            <input data-val="true" data-val-number="The field Check must be a number." data-val-required="The Check field is required." id="Check" name="Check" type="hidden" value="635615363775003514" />
+                            <input id="AutoRespondEmailSubject" name="AutoRespondEmailSubject" type="hidden" value="New Job Application" />
+                            <input id="EmailSubject" name="EmailSubject" type="hidden" value="New website enquiry" />
+                            <input name="__RequestVerificationToken" type="hidden" value="zIK5aB3hkSTBPh_Q4EVq0DgF5PvL7KUEgIO-giih3FweoqJ0HGNAIO8OjwY3jkd27QsE5dlZ1iJVCFeZgmUzovo9ep-k0RkZEdQBR8vaWJ81" />
+	                           
+                            <div class="form-group col-sm-6  col-lg-4">
+		                      <input type="submit" class="btn btn-primary btn-block" value="Submit"/>
+                            </div>
+                        </div><!-- /.row -->
+                    </form>
+            
+
+                    <h3>Related Jobs</h3>
+
+                    <div class="row related-jobs">
+
+                            <div class="col-sm-6 col-lg-4 related-job">
+                                <h4>MS-SQL (T-SQL) Admin</h4>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p><strong><i class="fa fa-money"></i> Salary:</strong></p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>&#163;20,001 - &#163;25,000</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p><strong><i class="fa fa-map-marker"></i> Location:</strong></p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>London</p>
+                                    </div>
+                                </div>
+                                <a class="btn btn-primary btn-block" href="/jobs-board/web-development/ms-sql-t-sql-admin/">View job</a>
+                            </div>
+                            <div class="col-sm-6 col-lg-4 related-job">
+                                <h4>Test IT Job</h4>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p><strong><i class="fa fa-money"></i> Salary:</strong></p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>TBC</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p><strong><i class="fa fa-map-marker"></i> Location:</strong></p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>Liverpool</p>
+                                    </div>
+                                </div>
+                                <a class="btn btn-primary btn-block" href="/jobs-board/web-development/test-it-job/">View job</a>
+                            </div>
+                            <div class="col-sm-6 col-lg-4 related-job">
+                                <h4>PHP Developer - JavaScript / jQuery</h4>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p><strong><i class="fa fa-money"></i> Salary:</strong></p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>&#163;20,001 - &#163;25,000</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p><strong><i class="fa fa-map-marker"></i> Location:</strong></p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>Liverpool</p>
+                                    </div>
+                                </div>
+                                <a class="btn btn-primary btn-block" href="/jobs-board/web-development/php-developer-javascript-jquery/">View job</a>
+                            </div>
+
+                    </div>
+
+
+
+
+
+                </div><!-- /#js-job-posting -->
+
+
+            </section>
+            <aside class="col-md-3 col-sm-4 sidebar">
+
+                <div class="js-affix">
+                    
+                    <p><a href="#apply-now" class="btn btn-primary btn-block">Apply now</a></p>
+                    <p><strong>Job Reference:</strong> HDABC1</p>
+                
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p><strong><i class="fa fa-money"></i> Salary:</strong></p>
+                        </div>
+                        <div class="col-md-6">
+                            <p>&#163;25,001 - &#163;30,000</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p><strong><i class="fa fa-map-marker"></i> Location:</strong></p>
+                        </div>
+                        <div class="col-md-6">
+                            <p>Manchester</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p><strong><i class="fa fa-user"></i> Position</strong></p>
+                        </div>
+                        <div class="col-md-6">
+                            <p>Permanent</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p><strong><i class="fa fa-calendar"></i> Added On: </strong></p>
+                        </div>
+                        <div class="col-md-6">
+                            <p>31/10/2014</p>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <p>Share this job</p>
+                        <ul class="list-inline social-icons">
+                            <li class="twitter">
+                                <a href="">
+                                    <i class="fa fa-twitter wow rotateIn" data-wow-delay="0.10s"></i>
+                                </a>
+                            </li>
+                            <li class="googleplus">
+                                <a href="">
+                                    <i class="fa fa-google-plus wow rotateIn" data-wow-delay="0.20s"></i>
+                                </a>
+                            </li>
+                            <li class="facebook">
+                                <a href="">
+                                    <i class="fa fa-facebook wow rotateIn" data-wow-delay="0.30s"></i>
+                                </a>
+                            </li>
+                            <li class="pinterest">
+                                <a target="_blank" href="">
+                                    <i class="fa fa-pinterest wow rotateIn" data-wow-delay="0.40s"></i>
+                                </a>
+                            </li>
+                        </ul>  
+                    </div>
+
+              
+                    <form action="/" enctype="multipart/form-data" method="post" role="form">                    
+                        <button type="submit" id="js-save-job-btn" class="btn btn-secondary btn-block" title="Save this to My Jobs" data-loading-text="Saving...">
+                          Save To My Jobs
+                        </button>
+                    </form>         
+
+                    <p><a href="javascript:history.back(-1)" class="btn btn-primary btn-block">&laquo; Back</a></p>
+
+                    <div class="widget">
+                        <ul class="list-group">
+                            <li class="list-group-item"><h4>My Saved Jobs</h4></li>
+
+                            <li class="list-group-item" id="saved-job-1312">
+                                <a href="/">MS-SQL (T-SQL) Admin</a>
+                                <form action="/" enctype="multipart/form-data" method="post" style="display:inline">
+                                    <a data-id="1312" href="#" class="remove-job pull-right text-danger js-remove-job" title="Remove">
+                                        <i class="fa fa-trash-o"></i>
+                                    </a>
+                                    <input name='ufprt' type='hidden' value='' />
+                                </form>                       
+                           </li>
+                           <li class="list-group-item" id="saved-job-1348">
+                                <a href="/">Test IT Job</a>
+                                <form action="/" enctype="multipart/form-data" method="post" style="display:inline">
+                                    <a data-id="1348" href="#" class="remove-job pull-right text-danger js-remove-job" title="Remove">
+                                        <i class="fa fa-trash-o"></i>
+                                    </a>
+                                    <input name='ufprt' type='hidden' value='' />
+                                </form>                      
+                           </li>
+
+                        </ul>
+                    </div>
+
+                </div><!-- /.js-affix -->
+
+            </aside>
+        </div><!-- /.container -->
+    </div><!-- /.row -->
+
+    <script src="/BasepackageHTML/scripts/plugins/require.js"></script>
+    <script>
+        require(['/BasepackageHTML/scripts/app.js'], function () {
+            /*
+            FROM BASE PACKAGE
+
+            require(['jobboard'], function () {
+            })  
+            require(['async!gmap', 'jquery'], function () {
+                var directionsDisplay
+                var directionsService
+                var map
+
+                if (typeof initializeGoogleMap != 'undefined') {
+                  initializeGoogleMap()
+                }
+            })
+            */
+        })
+    </script>
+
+</body>
+</html>

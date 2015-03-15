@@ -1,0 +1,95 @@
+/* Table of Contents
+==================================================
+    
+    #Table layout
+    #layout
+ 
+   ==================================================
+*/
+
+/* ==========================================================================
+#Table layout
+========================================================================== */
+@media (min-width: $screen-sm) {
+	.col-sm-table {
+		display: table;
+		> div {
+			display: table-cell;
+			vertical-align: middle;
+			float:none;
+		}
+	}
+}
+
+/* ==========================================================================
+#layout
+========================================================================== */
+
+.main-col,
+.sidebar {
+	@include spread-value(margin-top, 25px, 40px); //equivalent 30px -> 50px
+}
+.sidebar {
+	.widget:first-child {
+		margin-top: 9px;
+	}
+	.widget:last-child {
+		margin-bottom: 0;
+	}
+}
+
+/* fluid full-width rows e.g. @ home study section */
+.fluid-row {
+	img {
+		width:100%;
+	}
+	.fluid-col {
+		padding:0 !important;
+		
+		&.border {
+			padding:0 1px !important;
+		}
+	}
+}
+
+.padded-text {	
+	.text {
+		background-color: #f6f6f6;
+		@include spread-value(padding-top, 25px, 40px); //equivalent 30px -> 50px
+		@include spread-value(padding-bottom, 25px, 45px); //equivalent 30px -> 50px
+		@include spread-value(padding-left, 15px, 50px); //equivalent 20px -> 50px
+		@include spread-value(padding-right, 15px, 50px); //equivalent 20px -> 50px
+	}
+}
+
+.fluid-alt-backgrounds {
+	text-align: center;
+	.text {
+		@include spread-value(padding-top, 20px, 80px); //equivalent 30px -> 90px
+		@include spread-value(padding-bottom, 25px, 85px); //equivalent 30px -> 90px}
+
+		padding-left: 15px;
+		padding-right:15px;
+		&.one {
+			background-color: #f5f5f5;
+		}
+		@media (min-width: $screen-sm) {
+			&.one {		
+				background-color: #fff;
+			}
+			&.two {
+				background-color: #f5f5f5;
+			}	
+		}	
+		@media (min-width: $screen-lg) {
+			&.one {			
+				padding-left: 30%;
+				padding-right:80px;
+			}
+			&.two {
+				padding-left:80px;
+				padding-right:30%;
+			}	
+		}	
+	}	
+}

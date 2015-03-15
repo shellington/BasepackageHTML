@@ -1,0 +1,168 @@
+/* Table of Contents
+==================================================
+    
+    #Keep mobile nav for desktop - bootstrap overrides
+
+   ==================================================
+*/
+
+/* ==========================================================================
+#Keep mobile nav for desktop - bootstrap overrides
+========================================================================== */
+
+.header-mobile {
+    background-color:$link-color;
+    padding: 20px 0;
+    .navbar {
+        margin:0;
+        min-height: unset;
+    }
+    .navbar-default {
+        background: none;
+        border:none;
+    }
+    .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+        background: none;
+    }
+    .navbar-header {
+        float: none;
+        position: relative;
+        z-index: 20;
+    }
+      
+    .navbar-toggle.collapsed {
+        border-color:transparent;
+        .icon-bar {
+            display: block;
+            background-color: #fff;  
+            height: 7px;
+            width: 37px;
+            border-radius: 0;
+        } 
+        &:before {
+            display: none;
+        }
+    } 
+    .navbar-toggle {
+        display: block;
+        margin:0;
+        border-color:#000;
+        border-radius: 0;
+        padding:0;
+        position: relative;
+        height:39px;
+        width: 41px;
+        text-align: center;
+
+        &:before {            
+            line-height: 1;
+            content: "\f00d";
+            font-family: FontAwesome;
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: inherit;
+            color: #000;
+            font-size: 36px;
+            position: absolute;
+            top: 0px;
+            left: 5px;
+        }
+
+        .icon-bar {
+            display: none;
+        }
+    }
+    .navbar-toggle .icon-bar + .icon-bar {
+        margin-top: 5px;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+        position:absolute;
+        z-index: 10;
+        width: 300px;
+        background: #f3f3f3;
+        right: -20px;
+        top:-20px;        
+        padding:0 20px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-collapse.collapse.in { 
+        display: block !important; 
+    }
+    .navbar-nav {
+        padding-top:65px;
+        float: none!important;
+        margin: 7.5px -15px;
+    }
+    .navbar-nav > li,
+    .navbar-nav > li > ul > li {
+        border-top: 1px solid #c6c6c6;        
+    }
+    .navbar-nav>li {
+        float: none;
+        &:first-child {
+            border-top:none;
+        }
+    }
+    .navbar-nav > li > a {        
+        color:$link-color !important;
+        font-size: 16px;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color:$link-hover-color !important;
+        padding-left: 25px;
+        font-size: 14px;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu .dropdown-menu > li > a {
+        color:inherit !important;
+        padding-left: 35px;
+    }
+    .navbar-nav li a {
+        position: relative;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .navbar-default .navbar-nav > .open > a, 
+    .navbar-default .navbar-nav > .open > a:focus, 
+    .navbar-default .navbar-nav > .open > a:hover,
+    .navbar-default .navbar-nav > .open a.highlighted {
+        text-decoration: underline;
+        background: none;
+    }
+    .navbar-default .navbar-nav .active > a {
+        background: #e7e7e7 !important;
+    }
+    
+
+    // Dropdown second level nav
+    .navbar { 
+        .dropdown-menu {
+            padding: 0;
+        } 
+        .open .dropdown-menu {
+            position: static;
+            float: none;
+            width: auto;
+            margin-top: 0;
+            background-color: transparent;
+            border: 0;
+            box-shadow: none;
+            > li > a,
+            .dropdown-header {
+                padding: 10px 15px 10px 25px;
+            }
+            > li > a {
+                line-height: $line-height-computed;
+                &:hover,
+                &:focus {
+                  background-image: none;
+                }
+            }
+        }
+    }
+    
+}

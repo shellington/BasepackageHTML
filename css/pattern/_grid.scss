@@ -1,0 +1,197 @@
+/* Table of Contents
+==================================================
+    
+    #grid general
+    #grid title boxes
+	#grid overlay
+	#grid text hover
+	#grid sizes
+
+   ==================================================
+*/
+
+/* ==========================================================================
+#grid general
+========================================================================== */
+
+.grid {
+	a {
+		position: relative;
+		display: block;
+		text-decoration: none;
+	}
+	.grid-item {
+		@include spread-value(margin-top, 20px, 40px); //equivalent 30px -> 50px
+	}
+}
+
+.grid-pagination {
+	@include spread-value(margin-top, 20px, 40px); //equivalent 30px -> 50px	
+}
+
+/* ==========================================================================
+#grid title boxes
+========================================================================== */
+
+.grid.grid-title-boxes {
+	a {
+		h4 {
+			padding: 15px 10px; // equivalent 20px 10px
+			background: $link-color;
+			color:#fff;
+			font-size: 17px;
+			line-height: 1.3;
+		}
+		&:hover {
+			h4 {
+				background: $link-hover-color;
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+#grid overlay
+========================================================================== */
+
+.grid.grid-overlay {
+	.overlay {
+		position: absolute;
+		width:100%;
+		height:100%;
+		/* Fallback for browsers that doesn't support rgba */
+	    background: rgb(0, 0, 0) transparent;
+	    /* rgba with 0.6 opacity */
+	    background: rgba(0, 0, 0, 0.5);
+	    /* For IE 5.5 - 7 */
+	    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7f000000, endColorstr=#7f000000);
+	    /* For IE 8 */
+	    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#7f000000, endColorstr=#7f000000)";
+	    left:0;
+	    top:0;    
+	}
+}
+
+/* ==========================================================================
+#grid text-hover
+========================================================================== */
+
+.grid.grid-text-hover {
+	.grid-item > div {
+		position: relative;
+	}
+	.overlay {
+		opacity: 0;
+		background: $link-color;
+		color:#fff;
+		padding:20px 10px;
+		position: absolute;
+		width:100%;
+		height:100%;
+		left:0;
+		top:0;
+		text-align: center;
+
+		h3 {
+			font-size:$font-size-h4;
+			color:#fff;
+			margin-bottom: 8px;
+		}
+		h4 {
+			font-size: $font-size-h4;
+			margin-bottom: 8px;
+			color:#fff;
+		}	
+		p {
+			margin-bottom: 0;
+			font-size:14px;
+			margin-bottom: 8px;
+		}
+		a {
+			color:#fff;
+			padding: 0 10px;
+			&:hover {
+				color:$link-hover-color;
+			}
+			i {
+				font-size: $font-size-h4;
+			}
+		}
+	}
+	.grid-item > div:hover .overlay,
+	.grid-item > div:active .overlay {
+		opacity: 1;
+	}
+}
+
+/* ==========================================================================
+#grid sizes
+========================================================================== */
+.grid-md {
+	// col classes: col-ms-6 col-sm-4 col-md-3
+	.grid-item {
+		@media (min-width: $screen-xs-min) and (max-width: $screen-sm - 1) {
+			&:nth-of-type(2n+1) {
+				clear: left;
+			}
+		}
+		@media (min-width: $screen-sm) and (max-width: $screen-md - 1) {
+			&:nth-of-type(3n+1) {
+				clear: left;
+			}
+		}
+		@media (min-width: $screen-md) {
+			&:nth-of-type(4n+1) {
+				clear: left;
+			}
+		}
+	}
+}
+
+.grid-lg {
+	// col classes: col-ms-6 col-sm-4
+	.grid-item {
+		@media (min-width: $screen-xs-min) and (max-width: $screen-sm - 1) {
+			&:nth-of-type(2n+1) {
+				clear: left;
+			}
+		}
+		@media (min-width: $screen-sm) {
+			&:nth-of-type(3n+1) {
+				clear: left;
+			}
+		}
+	}
+}
+
+.grid-md-sidebar {
+	// col classes: col-ms-6 col-md-4
+	.grid-item {
+		@media (min-width: $screen-xs-min) and (max-width: $screen-md - 1) {
+			&:nth-of-type(2n+1) {
+				clear: left;
+			}
+		}
+		@media (min-width: $screen-md) {
+			&:nth-of-type(3n+1) {
+				clear: left;
+			}
+		}
+	}
+}
+
+.grid-lg-sidebar {
+	// col classes: col-ms-6 col-lg-4
+	.grid-item {
+		@media (min-width: $screen-xs-min) and (max-width: $screen-lg - 1) {
+			&:nth-of-type(2n+1) {
+				clear: left;
+			}
+		}
+		@media (min-width: $screen-lg) {
+			&:nth-of-type(3n+1) {
+				clear: left;
+			}
+		}
+	}
+}

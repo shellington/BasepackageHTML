@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <link rel="stylesheet" href="/BasepackageHTML/css/style.css"/>
+</head>
+<body>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="list-group">
+					<a class="list-group-item" href="/BasepackageHTML/guides/index.html">
+						<i class="fa fa-chevron-left"></i> Back to Guides
+					</a>
+				</div>
+			</div>
+			<section class="col-sm-12 main-col">
+				<h1 class="page-header">Wow.js & animate.css</h1>
+				<div class="list-group">
+					<a class="list-group-item" href="http://mynameismatthieu.com/WOW/docs.html" target="_blank">
+						wow.js <i class="fa fa-chevron-right"></i>
+					</a>	
+					<a class="list-group-item" href="http://daneden.github.io/animate.css/" target="_blank">
+						animate.css <i class="fa fa-chevron-right"></i>
+					</a>				
+				</div>
+			</section>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<section class="col-sm-12 cms-content">						
+				<h4>How To</h4>
+				<p>'.wow' triggers wow.js</p>
+				<p>'.bounceInUp' is an example of one of the animation classes available from animate.css</p>
+				<code>
+					&lt;div class="wow bounceInUp"&gt;
+					  Content to Reveal Here
+					&lt;/div&gt;
+				</code>
+				<h4>Advanced Options</h4>
+				<p>data-wow-duration: Change the animation duration<br>
+				data-wow-delay: Delay before the animation starts<br>
+				data-wow-offset: Distance to start the animation (related to the browser bottom)<br>
+				data-wow-iteration: Number of times the animation is repeated</p>
+				<code>
+					&lt;section class="wow slideInLeft" data-wow-duration="2s" data-wow-delay="5s"&gt;
+					&lt;/section&gt;
+
+					<br />
+					
+					&lt;section class="wow slideInRight" data-wow-offset="10"  data-wow-iteration="10"&gt;
+					&lt;/section&gt;
+				</code>
+			</section>
+		</div>
+	</div>
+
+    <script src="/BasepackageHTML/scripts/plugins/require.js"></script>
+    <script>
+	    require(['/BasepackageHTML/scripts/app.js'], function () {
+	      
+	    })
+	 </script>
+</body>
+</html>

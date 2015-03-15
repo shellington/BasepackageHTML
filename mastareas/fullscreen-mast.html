@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <link rel="stylesheet" href="/BasepackageHTML/css/style.css"/>
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <div class="row">
+
+        <div class="col-sm-5 col-sm-pull-7 header-left">
+          <a class="logo" href="/"><img src="/BasepackageHTML/images/logo.png" alt="logo" /></a>
+          <span class="tel"><a href="tel:01517070909">Call us 0151 707 0909</a></span>
+        </div><!-- /.header-left -->
+
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  </header>
+
+
+  <!-- Home mast area -->
+  <div class="home-masthead-wrap">
+    <!-- inline styling to allow for content editabloe images. N.B. the rgba bits are to give the blac overlay automatically -->
+    <div class="home-masthead" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/BasepackageHTML/images/fullscreen-mast-img.jpg');">
+      <div class="content">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <h1>This is some inspirational text <strong>'with a message!'</strong></h1>
+              <p>Some more lines of inspirational sub-text</p>
+              <select class="js-select" data-placeholder="This is a select2 example" tabindex="-1">
+                <option></option>
+                <option>one</option>
+                <option>two</option>
+                <option>three</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>  
+    </div>
+  </div>
+  <!-- /Home mast area -->
+
+    <script src="/BasepackageHTML/scripts/plugins/require.js"></script>
+    <script>
+    require(['/BasepackageHTML/scripts/app.js'], function () {
+      require(['fullscreenMast']);
+    })
+    </script>
+</body>
+</html>

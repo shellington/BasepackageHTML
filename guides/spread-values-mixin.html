@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <link rel="stylesheet" href="/BasepackageHTML/css/style.css"/>
+</head>
+<body>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="list-group">
+					<a class="list-group-item" href="/BasepackageHTML/guides/index.html">
+						<i class="fa fa-chevron-left"></i> Back to Guides
+					</a>
+				</div>
+			</div>
+			<section class="col-sm-12 main-col">
+				<h1 class="page-header">"spread-values" SASS Mixin</h1>
+				<div class="list-group">
+					<a class="list-group-item" href="http://www.sitepoint.com/scaling-values-across-breakpoints-using-sass/" target="_blank">
+						spread values <i class="fa fa-chevron-right"></i>
+					</a>			
+				</div>
+			</section>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<section class="col-sm-12 cms-content">						
+				<h4>How To</h4>
+				<p>The mixin will take the css attribute and the two values you enter and then in/decrease from the first to the second value in incremenets across the breakpoints</p>
+				<p>Good for styling font-size and white space (margins and padding) across devices</p>
+				<p>
+					<code>
+						h2 {
+						  @include spread-value(font-size, 20px, 30px);
+						}
+					</code>
+				</p>
+				<p>You can also specify which breakpoint to start or end the scaling at:</p>
+				<p>
+					<code>
+						h2 {
+						  @include spread-value(font-size, 20px, 30px, medium, xlarge);
+						}
+					</code>
+				</p>
+				<p>The breakpoint keywords (which we've matxhed to bootstrap) are:<br>
+				small: 480px,<br>
+				medium: 768px,<br>
+				large: 992px,<br>
+				xlarge: 1200px
+				</p>
+			</section>
+		</div>
+	</div>
+
+    <script src="/BasepackageHTML/scripts/plugins/require.js"></script>
+    <script>
+	    require(['/BasepackageHTML/scripts/app.js'], function () {
+	      
+	    })
+	 </script>
+</body>
+</html>

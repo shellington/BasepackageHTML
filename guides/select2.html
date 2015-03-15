@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <link rel="stylesheet" href="/BasepackageHTML/css/style.css"/>
+</head>
+<body>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="list-group">
+					<a class="list-group-item" href="/BasepackageHTML/guides/index.html">
+						<i class="fa fa-chevron-left"></i> Back to Guides
+					</a>
+				</div>
+			</div>
+			<section class="col-sm-12 main-col">
+				<h1 class="page-header">Select2 - custom styling for select lists</h1>
+				<div class="list-group">
+					<a class="list-group-item" href="https://select2.github.io/" target="_blank">
+						select2 <i class="fa fa-chevron-right"></i>
+					</a>
+					<a class="list-group-item" href="https://github.com/select2/select2	" target="_blank">
+						select2 on github <i class="fa fa-chevron-right"></i>
+					</a>			
+				</div>
+			</section>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<section class="col-sm-12 cms-content">	
+				<h4>Example</h4>	
+				<p>				
+					<select class="js-select select2" data-placeholder="This is a select2 example" tabindex="-1">
+						<option></option>
+						<option>one</option>
+						<option>two</option>
+						<option>three</option>
+					</select> 
+				</p>
+				<p><a target="_blank" href="https://select2.github.io/examples.html">More Examples &raquo;</a></p>
+				<h4>How To</h4>
+				<p>The select2 plugin JS is triggered by the '.js-select' class.</p>
+				<p>The data-placeholder sets the placeholder text for the select list.<br>
+				N.B. There must be an empty option left first which will take on the placeholder text</p>
+				<p>
+					<code>
+						&lt;select class="js-select select2" data-placeholder="This is a select2 example" tabindex="-1"&gt;<br>
+							&nbsp;&nbsp;&lt;option&gt;&lt;/option&gt;<br>
+							&nbsp;&nbsp;&lt;option&gt;one&lt;/option&gt;<br>
+							&nbsp;&nbsp;&lt;option&gt;two&lt;/option&gt;<br>
+							&nbsp;&nbsp;&lt;option&gt;three&lt;/option&gt;<br>
+						&lt;/select&gt;
+					</code>
+				</p>
+				<p>The triggering JS is in main.js</p>
+				<p>
+					<code>
+						if ($('.js-select').length) { <br>
+					        &nbsp;require(['select2'], function () { <br>
+					            &nbsp;&nbsp;$('.js-select').select2({ <br>
+									&nbsp;&nbsp;&nbsp;allowClear: true <br>
+								&nbsp;&nbsp;}); <br>
+					        &nbsp;}); <br>
+					    }
+    				</code>
+    			</p>
+    			<p><a target="_blank" href="https://select2.github.io/options.html">More options &raquo;</a></p>
+			</section>
+		</div>
+	</div>
+
+    <script src="/BasepackageHTML/scripts/plugins/require.js"></script>
+    <script>
+	    require(['/BasepackageHTML/scripts/app.js'], function () {
+	      
+	    })
+	 </script>
+</body>
+</html>

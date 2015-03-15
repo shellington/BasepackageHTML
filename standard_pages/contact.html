@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <link rel="stylesheet" href="/BasepackageHTML/css/style.css"/>
+</head>
+<body>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<ol itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="breadcrumb">
+					<li><a itemprop="url" href="/"><span itemprop="title">Home</span></a></li>
+					<li class="active">Page Title</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+
+			<div class="col-sm-8 main-col">
+				<div class="cms-content">
+					<h3>Let's Get in Touch</h3>
+				</div><!-- /.cms-content-->
+				<form role="form" class="form" method="post" enctype="multipart/form-data" action="" novalidate="novalidate">    
+					<div class="row">
+
+						<div class="form-group col-sm-6 col-lg-4">
+							<label for="Name" class="control-label">Name <span class="required">*</span></label>
+							<input type="text" value="" name="Name" id="Name" data-val-required="The Name field is required." data-val="true" class="form-control"> 
+						</div>
+						<div class="form-group col-sm-6 col-lg-4">
+							<label for="Email" class="control-label">Email <span class="required">*</span></label>
+							<input type="email" value="" name="Email" id="Email" data-val-required="The Email field is required." data-val-email="The Email field is not a valid e-mail address." data-val="true" class="form-control"> 
+						</div>
+						<div class="form-group col-sm-6 col-lg-4">
+							<label for="Telephone" class="control-label">Telephone <span class="required">*</span></label>
+							<input type="tel" value="" name="Telephone" id="Telephone" data-val-required="The Telephone field is required." data-val="true" class="form-control"> 
+							<span data-valmsg-replace="true" data-valmsg-for="Telephone" class="field-validation-valid"></span>
+						</div>
+						<div class="form-group col-sm-6 col-lg-12">
+							<label for="Option" class="control-label">Enquiry Type <span class="required">*</span></label>
+							<select name="Option" id="Option" data-val-required="The Enquiry Type field is required." data-val="true" class="form-control">
+								<option value="">Please Select</option>
+								<option>Option one</option>
+								<option></option>
+								<option>Option two - quite short</option>
+								<option></option>
+								<option>Option three - this is quite a bit longer</option>
+							</select>
+							<span data-valmsg-replace="true" data-valmsg-for="Option" class="field-validation-valid"></span>
+						</div>
+						<div class="form-group col-lg-12">
+							<label for="Message" class="control-label">Your Message <span class="required">*</span></label>
+							<textarea rows="6" name="Message" id="Message" data-val-required="The Your Message field is required." data-val="true" cols="20" class="form-control"></textarea> 
+							<span data-valmsg-replace="true" data-valmsg-for="Message" class="field-validation-valid"></span>
+						</div>
+						<div class="form-group col-lg-12 hide">
+							<label for="HoneyPot">Ignore</label> 
+							<input type="text" value="" name="HoneyPot" id="HoneyPot" data-val-range-min="0" data-val-range-max="0" data-val-range="Please leave this field blank." data-val="true" class="text-box single-line"> 
+							<span data-valmsg-replace="true" data-valmsg-for="HoneyPot" class="field-validation-valid"></span>
+						</div>					
+						<div class="form-group col-sm-6 col-sm-push-6 col-lg-push-8 col-lg-4">
+							<input type="submit" value="Submit" class="btn btn-primary btn-block">
+						</div>
+					</div>
+				</form>
+			</div>
+
+			<aside class="col-sm-4 sidebar">
+				<h3>Head Office</h3>
+				<p>
+					<i class="fa fa-map-marker"></i>
+					<strong>Address:</strong> 
+					<br>
+					Base Package
+					<br>
+					123 Umbraco Road
+					<br>
+					Liverpool
+					<br>
+					L1 ABC
+				</p>
+				<p>
+					<i class="fa fa-phone"></i>
+					<strong>Phone:</strong> 
+					0800 000 0000
+				</p>
+				<p>
+					<i class="fa fa-envelope"></i>
+					<strong>Email:</strong> 
+					<a href="mailto:info@example.com">info@example.com</a>
+				</p>
+				<h3>Business Hours</h3>
+				<p>
+					<i class="fa fa-time"></i>
+					9am to 5pm Monday to Friday
+				</p>
+				<h3>Follow Us</h3>
+				<ul class="list-inline social-icons">
+                    <li class="twitter">
+                        <a href="">
+                            <i data-wow-delay="0.10s" class="fa fa-twitter wow rotateIn animated" style="visibility: visible; animation-delay: 0.1s; animation-name: rotateIn;"></i>
+                        </a>
+                    </li>
+                    <li class="googleplus">
+                        <a href="">
+                            <i data-wow-delay="0.20s" class="fa fa-google-plus wow rotateIn animated" style="visibility: visible; animation-delay: 0.2s; animation-name: rotateIn;"></i>
+                        </a>
+                    </li>
+                    <li class="facebook">
+                        <a href="">
+                            <i data-wow-delay="0.30s" class="fa fa-facebook wow rotateIn animated" style="visibility: visible; animation-delay: 0.3s; animation-name: rotateIn;"></i>
+                        </a>
+                    </li>
+                    <li class="pinterest">
+                        <a href="" target="_blank">
+                            <i data-wow-delay="0.40s" class="fa fa-pinterest wow rotateIn animated" style="visibility: visible; animation-delay: 0.4s; animation-name: rotateIn;"></i>
+                        </a>
+                    </li>
+                </ul>
+			</div>
+
+		</div>
+	</div>
+	
+	<div class="contact-map">
+		<iframe width="100%" height="400" frameborder="0" src="https://maps.google.co.uk/maps?q=PH+Creative+Ltd,+Dale+Street,+Liverpool&amp;hl=en&amp;sll=53.495347,-2.920192&amp;sspn=0.665003,1.377411&amp;oq=ph-crea&amp;hq=PH+Creative+Ltd,&amp;hnear=Dale+St,+Liverpool,+United+Kingdom&amp;t=m&amp;z=16&amp;output=embed" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+	</div>
+
+    <script src="/BasepackageHTML/scripts/plugins/require.js"></script>
+    <script>
+	    require(['/BasepackageHTML/scripts/app.js'], function () {
+	      
+	    })
+	 </script>
+</body>
+</html>

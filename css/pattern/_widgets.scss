@@ -1,0 +1,104 @@
+/* Table of Contents
+==================================================
+
+    #widgets    
+    #sub nav
+    #link corner
+    #select2
+
+   ==================================================
+*/
+
+/* ==========================================================================
+#widgets
+========================================================================== */
+
+.widget {
+	h3 {
+		@include spread-value(font-size, $font-size-h3-small, $font-size-h3);
+		color: inherit;
+	}
+	> *:last-child {
+		padding-bottom:0;
+		margin-bottom: 0;
+	}
+
+	@include spread-value(margin-bottom, 35px, 45px); //equivalent 40px -> 50px
+	&.sub-nav {
+		@include spread-value(margin-bottom, 20px, 30px); //equivalent 40px -> 50px	
+	}
+}
+
+.widget-featured {
+	img {
+		@include spread-value(margin-bottom, 15px, 25px); //equivalent 20px -> 30px	
+	}
+	h3 {
+		color: $link-color;
+		@include spread-value(margin-bottom, 10px, 20px); //equivalent 20px -> 30px	
+	}
+	p {
+		margin-bottom: 0;
+	}
+	
+}
+
+.widget-tags {
+	ul {
+		margin-top:-10px;
+		li {
+			display: inline-block;
+			margin-top: 10px; 
+			margin-right: 5px; 
+		}
+	}
+}
+
+/* ==========================================================================
+#sub nav
+========================================================================== */
+
+.widget.sub-nav {
+	.nav {
+		li {
+			border-top: 1px solid #d9d9d9;
+			margin-top: 0;
+
+			&.active > a {
+				color:$link-hover-color;
+				background: $gray-lighter;
+
+				&:before {
+					color: $link-hover-color;
+				}
+			}
+
+			a {
+				position: relative;
+				padding: 12px 15px 12px 25px;
+
+				&:before {
+				    content: "\f0da";
+				    font-family: FontAwesome;
+				    font-style: normal;
+				    font-weight: normal;
+				    text-decoration: inherit;
+				    color: $link-color;
+				    font-size: 14px;
+				    padding-right: 0.5em;
+				    position: absolute;
+				    top: 14px;
+				    left: 10px;
+				}
+				&:hover {
+					&:before {
+						color: $link-hover-color;
+					}
+				}
+			}
+			ul li {
+				padding-left: 25px;
+			}
+		}
+	}
+}

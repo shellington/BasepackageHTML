@@ -1,0 +1,42 @@
+
+@import "pattern/vars";
+@import "bootstrap";
+@import "mixins/spread-value";
+
+@import "fontawesome/font-awesome";
+
+@import "pattern/global";
+@import "pattern/layouts";
+
+@import "plugins/animate";
+@import "plugins/magnific";
+@import "plugins/owlcarousel";
+@import "plugins/select2";
+@import "plugins/smartmenu";
+
+//SassInsertLeaveAsIs
+
+@import "pattern/blog";
+@import "pattern/widgets";
+@import "pattern/grid";
+@import "pattern/footer";
+@import "pattern/header";
+
+@import "pattern/modules/fullscreen-mast";
+@import "pattern/modules/mobile-nav-on-desktop";
+
+// Style up input errors
+// This is based on jquery-validation
+.input-validation-errors {
+  border-color: $state-danger-bg;
+}
+
+.field-validation-error {
+  color: $state-danger-text;
+}
+
+.form-control {
+  &.valid {
+    border-color: $state-success-bg;
+  }
+}

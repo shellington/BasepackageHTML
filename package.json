@@ -1,0 +1,34 @@
+{
+  "name": "pattern",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "author": {
+    "name": "Ph.Creative",
+    "url": "http://www.ph-creative.com"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-watch": "~0.6.1",
+  
+  
+    "grunt-sass": "0.16.1",
+  
+    "grunt-contrib-jshint": "~0.10.0",
+    "time-grunt": "^1.0.0",
+    "load-grunt-tasks": "^1.0.0",
+    "grunt-contrib-cssmin": "^0.10.0",
+    "grunt-autoprefixer": "^1.0.1"
+  
+    ,"grunt-express-server": "~0.4.17"
+  
+  
+    ,"grunt-bootlint": "~0.5.3"
+  
+  },
+  "dependencies": {
+  
+    "express": "^4.5.1"
+  
+  }
+}

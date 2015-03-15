@@ -1,0 +1,734 @@
+/* Table of Contents
+==================================================
+    
+    #Typography    
+    #cms-content
+    #tools
+    #forms
+    #buttons
+    #breadcrumb
+    #pagination
+    #media object
+    #carousels
+    #search
+	#contact
+	#select2
+
+   ==================================================
+*/
+
+// controls wow.js flicker
+.js .wow {
+	visibility: hidden;
+}
+
+/* ==========================================================================
+#Typography
+========================================================================== */
+
+.page-header {
+	margin-top:0;
+	@include spread-value(font-size, $font-size-h1, $font-size-h1-small);
+	@include spread-value(margin-bottom, 10px, 25px); //equivalent 15px -> 30px
+	padding:0;
+	border:none;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4, 
+h5, .h5 {
+	margin-top:0;
+}
+
+a:hover,
+a:focus {
+	outline: 0 !important;
+}
+
+blockquote {
+
+	p {
+		margin-bottom: 10px;
+	}
+
+	small {
+		font-style: normal;
+		text-align: right;
+	}
+	cite {
+		font-style: normal;
+	}
+}
+
+/* ==========================================================================
+#cms-content
+========================================================================== */
+
+.cms-content {
+	h2, .h2,
+	h3, .h3,
+	h4, .h4, 
+	h5, .h5 {		
+		@include spread-value(margin-top, 25px, 45px); //equivalent 30px -> 50px
+	}
+	h2, .h2 {
+		@include spread-value(font-size, $font-size-h2-small, $font-size-h2);
+		@include spread-value(margin-bottom, 15px, 25px); //equivalent 20px -> 30px		
+	}
+	h3, .h3 {
+		@include spread-value(font-size, $font-size-h3-small, $font-size-h3);
+		@include spread-value(margin-bottom, 15px, 25px); //equivalent 20px -> 30px
+		color: inherit;
+	}
+	h4, .h4 {
+		font-size: $font-size-h4;
+		@include spread-value(margin-bottom, 10px, 20px); //equivalent 15px -> 25px
+	}
+	h5, .h5 {
+		font-size: $font-size-h5;
+		@include spread-value(margin-bottom, 10px, 20px); //equivalent 15px -> 25px
+	}
+	p {
+		@include spread-value(margin-bottom, 10px, 25px); //equivalent 15px -> 35px
+	}
+	a {
+		text-decoration: underline;
+	}
+	ul, ol {
+		padding:0;
+		margin:0;
+		@include spread-value(margin-bottom, 10px, 25px); //equivalent 15px -> 35px
+	}
+
+	ul {
+		margin-left:20px; 
+		list-style:none;
+
+		li { 
+			padding-left: 15px; 
+			position: relative;
+			margin-top: 7px;
+
+			&:first-child {
+				margin-top: 0;
+			}
+
+			&:before {
+				font-family: FontAwesome;
+				content: "\f111";
+				color: $brand-primary; 
+				font-size: 7px; 
+				left: 0; 
+				position: absolute; 
+				top: 7px;
+			}
+				li {
+					&:first-child {
+						margin-top: 7px;
+					}
+					&:before {
+						content: "\f10c";
+					}
+				}
+		} 
+	}
+
+	ol {
+		margin-left:30px; 
+		li { 
+			margin-top: 7px;
+
+			&:first-child {
+				margin-top: 0;
+			}
+				li {
+					&:first-child {
+						margin-top: 7px;
+					}
+				}
+		} 
+	}
+
+	img {
+		max-width: 100%;
+		height: auto !important;
+	}
+    
+
+	img[align="left"],
+	img[style*="float: left"],
+	img[style*="float:left"],
+	img[align="right"],
+	img[style*="float: right"],
+	img[style*="float:right"]{
+	    display: block;
+	    margin: 15px auto;
+	    float: none !important;
+	}
+	@media (min-width: $screen-sm) {
+		img[align="left"],
+		img[style*="float: left"],
+		img[style*="float:left"],
+		img[align="right"],
+		img[style*="float: right"],
+		img[style*="float:right"]{		    
+		    margin: 15px 0;		    
+		}	
+	}
+	@media (min-width: $screen-md) {
+		img[align="left"],
+		img[style*="float: left"],
+		img[style*="float:left"]{
+		    margin: 20px 25px 20px 0px;
+		    float: left !important;
+		}
+		img[align="right"],
+		img[style*="float: right"],
+		img[style*="float:right"]{
+		    margin: 20px 0px 20px 25px;
+		    float: right !important;
+		}
+	}
+
+	table {
+		width: 100%;
+		max-width: 100%;
+		margin-bottom: $line-height-computed;
+		  // Cells
+		  > thead,
+		  > tbody,
+		  > tfoot {
+		  	> tr {
+		  		> th,
+		  		> td {
+		  			padding: $table-cell-padding;
+		  			line-height: $line-height-base;
+		  			vertical-align: top;
+		  			border-top: 1px solid $table-border-color;
+		  		}
+		  	}
+		  }
+		  // Bottom align for column headings
+		  > thead > tr > th {
+		  	vertical-align: bottom;
+		  	border-bottom: 2px solid $table-border-color;
+		  }
+		  // Remove top border from thead by default
+		  > caption + thead,
+		  > colgroup + thead,
+		  > thead:first-child {
+		  	> tr:first-child {
+		  		> th,
+		  		> td {
+		  			border-top: 0;
+		  		}
+		  	} 
+		  }
+		  // Account for multiple tbody instances
+		  > tbody + tbody {
+		  	border-top: 2px solid $table-border-color;
+		  }
+
+		  // Nesting
+		  table {
+		  	background-color: $body-bg;
+		  }
+	}
+
+}// .cms-content
+
+/* ==========================================================================
+#tools
+========================================================================== */
+
+.tel,
+.tel a {
+	text-decoration: none;
+	cursor:default;
+	color: inherit;
+}
+
+.instagram-feed {
+	.instagram-image {
+		@include opacity(.80);
+		&:hover {
+			@include opacity(1);
+		}
+	}
+}
+
+.link-bar {
+	display:block;
+	background-color: $link-color;
+	color:#fff;
+	text-decoration: none;
+	text-align: center;
+	padding: 25px 0; 
+	line-height:1;
+	font-weight: 600;
+
+	&:hover {
+		background-color: $link-hover-color;
+		color: #fff;
+		text-decoration: none;
+	}
+	a {
+		text-decoration: none;
+	}
+	i {
+		margin-right:10px;
+		font-size: 25px;
+	}
+}
+
+.image-fullwidth {
+	img {
+		width:100%;
+	}
+}
+
+.vertical-align {
+	position: relative;
+	overflow: hidden;
+	.content {
+		position: absolute !important;
+		left:0;
+		z-index: 100;
+		padding:20px;
+
+		> *:first-child {
+			margin-top: 0;
+		}
+		> *:last-child {
+			margin-bottom: 0;
+		}	
+	}
+}
+
+.block-overlay {
+	color:#fff;
+	position: relative;
+	margin-bottom: 30px;
+
+	&:before {
+	    background: linear-gradient(to right, rgba(0, 0, 0, 0.6) 0px, rgba(0, 0, 0, 0.6) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+	    content: " ";
+	    height: 100%;
+	    left: 0;
+	    position: absolute;
+	    top: 0;
+	    width: 100%;
+	    z-index: 1;
+	}	
+	.content {
+		position: relative;
+		z-index: 100;
+
+		> *:first-child {
+			margin-top: 0;
+		}
+		> *:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.block-background-image {
+	padding: 20px;
+	background-size: cover;
+	background-position: center center;
+	margin-bottom: 30px;
+	position: relative;
+	
+	.content {
+		position: relative;
+		z-index: 100;
+
+		> *:first-child {
+			margin-top: 0;
+		}
+		> *:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.video-wrap {
+	position: relative;
+	.overlay {
+		position:absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+		background: rgb(0, 0, 0) transparent;    
+    	background: rgba(0, 0, 0, 0.5);
+    	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7f000000, endColorstr=#7f000000);    	
+    	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#7f000000, endColorstr=#7f000000)";
+
+	}
+	&:hover {
+		.video-control i {
+			color:$link-color;
+		}
+	}
+
+	.video-control {
+    	background: rgb(255, 255, 255) transparent;    
+    	background: rgba(255, 255, 255, 0.5);
+    	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7fffffff, endColorstr=#7fffffff);    	
+    	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#7fffffff, endColorstr=#7fffffff)";
+		display: block;
+		position: absolute;
+		z-index: 10;
+		border-radius: 100%;
+		text-align: center;
+		left:50%;
+		top:50%;
+		cursor: pointer;
+		height:60px;
+		width:60px;
+		margin-left:-30px;
+		margin-top:-30px;		
+
+		i {
+			position: relative;
+			font-size: 20px;
+			top:20px;
+			color:#fff;
+		}
+
+		@media (min-width: $screen-sm) {
+			height:110px;
+			width:110px;
+			margin-left:-55px;
+			margin-top:-55px;
+
+			i {
+				font-size: 30px;
+				top:40px;
+			}
+		}
+		@media (min-width: $screen-lg) {
+			height:220px;
+			width:220px;
+			margin-left:-110px;
+			margin-top:-110px;
+
+			i {
+				font-size: 60px;
+				top:90px;
+			}
+		}		
+	}
+	&.small {
+		.video-control {
+			height:60px;
+			width:60px;
+			margin-left:-30px;
+			margin-top:-30px;
+
+			i {
+				font-size: 20px;
+				top:20px;
+			}	
+		}	
+	}
+}
+
+.link-corner {
+	display: block;
+	position: relative;
+	text-align: right;
+	color:#fff;
+	height:99px; 
+
+	&:after {
+		border-style: solid;
+		border-color: transparent transparent $link-color transparent;
+		border-width: 0 0 99px 283px;
+	    content: "";
+	    position: absolute;
+	    right: 0;
+	    bottom: 0;
+	}
+	&:hover{
+		color:#fff;
+		&:after {
+			border-color: transparent transparent $link-hover-color transparent;
+		}
+	}
+
+	span {			
+		position: absolute;
+		z-index: 10;
+		bottom:15px;
+		right:10px;
+		font-size: 18px;
+
+		i {
+			position: relative;
+			top:1px;
+			left:0;
+			font-weight: normal;
+			margin-left:3px;
+		}
+	}
+
+	@media (min-width: 450px) {
+		height:99px;
+		&:after {
+			border-width: 0 0 99px 360px;	
+		}
+
+		span {	
+			font-size: 18px;
+			bottom:15px;
+			right:15px;
+
+			i {
+				top:1;
+			}
+		}
+	}
+
+	@media (min-width: $screen-sm) {
+		height:69px;
+		&:after {
+			border-width: 0 0 69px 220px;	
+		}
+
+		span {	
+			font-size: 14px;
+			bottom:10px;
+			right:5px;
+
+			i {
+				top:1;				
+			}
+		}
+	}
+	@media (min-width: $screen-md) {
+		height:79px;
+		&:after {
+			border-width: 0 0 79px 253px;	
+		}
+
+		span {	
+			font-size: 18px;
+			bottom:8px;
+			right:8px;
+
+			i {
+				top:1;
+			}
+		}
+	}
+	@media (min-width: $screen-lg) {
+		height:99px;
+		&:after {
+			border-width: 0 0 99px 283px;	
+		}
+
+		span {	
+			font-size: 18px;
+			bottom:15px;
+			right:10px;
+
+			i {
+				top:1;
+			}
+		}
+	}
+	
+}	
+
+/* ==========================================================================
+#forms
+========================================================================== */
+
+span.required {
+	color: #ff0000;
+}
+.form {
+	.btn {
+		margin-top: 10px;
+	}
+}
+
+/* ==========================================================================
+#buttons
+========================================================================== */
+
+.btn-none {
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+/* ==========================================================================
+#breadcrumb
+========================================================================== */
+
+.breadcrumb {
+	display:none;
+	@media (min-width: $screen-sm) {display:block;}
+
+	margin:20px 0 0;
+	padding:0;
+	background: none;
+	font-size:14px;
+
+	a {
+		color: $text-color;
+		text-decoration: underline;
+		&:hover {
+			color:$link-color;
+		}
+	}
+}
+.breadcrumb > li + li::before {color:$text-color;}
+
+/* ==========================================================================
+#pagination
+========================================================================== */
+
+.pagination {
+	border-radius:0;
+	margin: 25px 0 0 !important;
+	list-style:none;
+
+	li {padding:0 !important;}
+	li:before {display: none;}
+}
+.pagination > li > a, 
+.pagination > li > span {
+    height: 40px;
+    line-height: 40px;
+    width: 40px;
+    padding: 0;
+    text-align: center;
+}
+.pagination > li > a, 
+.pagination > li > span {
+	border-radius:0 !important;
+	border-top: none;
+	border-bottom: 4px solid transparent;
+
+	i {
+		color:$link-hover-color;
+	}
+}
+.pagination > .active > a, 
+.pagination > .active > a:focus, 
+.pagination > .active > a:hover, 
+.pagination > .active > span, 
+.pagination > .active > span:focus, 
+.pagination > .active > span:hover,
+.pagination > li:hover > a, 
+.pagination > li:hover > span {
+	border-bottom: 4px solid $link-color;
+}
+
+.pagination > li.prev > a, .pagination > li.prev > span {
+	border-left:none;
+}
+.pagination > li.next > a, .pagination > li.next > span {
+	border-right:none;
+}
+
+/* ==========================================================================
+#media object
+========================================================================== */
+
+.media {
+	h4 {
+		font-size: 18px;
+		margin-top: 0;
+		margin-bottom: 12px; // equivalent 20px
+	}
+	.media-body {
+		padding-left: 10px;
+		p {
+			margin-bottom: 12px; // equivalent 20px
+		}
+		time {
+			color: $link-color;
+			margin-top: 12px; // equivalent 20px
+			display: block;
+		}
+		.social ul {
+			margin-top: 12px;
+			margin-bottom: 0;
+			li:first-child a {
+				padding-left:0;
+			}
+			a {
+				padding: 0 5px;
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+#carousels
+========================================================================== */
+
+// corrects margin/padding issues when using owel carousel with col- classes
+@media (max-width: $screen-sm - 1) {
+	overflow:hidden;
+	.carousel-wrapper {
+		margin-left:-15px !important;
+		margin-right: -15px !important;				
+	}
+}
+.owl-carousel {
+	&.row,
+	.row {
+		margin: 0;
+	}			
+	*[class^='col-'], *[class*=' col-'] {
+		padding:0;
+		margin-bottom: 25px; // equivalent 30px
+	}	
+}
+
+/* ==========================================================================
+#search
+========================================================================== */
+#site-search {
+	margin-top: 20px;
+	margin-bottom: 15px;
+	.btn {
+		@media (min-width:$screen-sm) {
+			margin-top:25px;
+		}
+	}
+	
+}
+.search-results {
+	li {
+		margin-bottom: 20px; // equivalent 30px
+	}
+}
+
+/* ==========================================================================
+#contact
+========================================================================== */
+
+.contact-map {
+	margin: 15px 30px 0; // allows scrollable margins on mobile/touch devices
+
+	@media (min-width: $screen-sm) {
+		margin: 15px 0 0;
+	}
+}
+
+/* ==========================================================================
+#select2
+========================================================================== */
+.select2 {
+	width: 300px;
+}
