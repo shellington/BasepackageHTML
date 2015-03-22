@@ -3,11 +3,11 @@
 *  Requires: jQuery
 *  Copyright 2015 Ph.Creative
 **/
-var verticalAlign = function () {
-    var $content = $('.vertical-align .content');
+var verticalAlign = function (e) {
+    var $content = $(e);
  
     $content.css({
-        top: ($('.vertical-align').outerHeight() / 2) - ($content.outerHeight() / 2)
+        top: ($(e).parent('.vertical-align').outerHeight() / 2) - ($content.outerHeight() / 2)
     });
 };
 
@@ -19,8 +19,10 @@ define(['jquery'], function ($) {
     $(window).resize(function () {
         clearTimeout(timer);
         timer = setTimeout(function () {
-            if ($('.vertical-align').length && $('.vertical-align .content').length) {
-                verticalAlign();
+            if ($('.vertical-align .content').length) {
+            	$('.vertical-align .content').each(function() {
+				  verticalAlign(this);
+				});               
             }
         }, 500);
     }).trigger('resize');
