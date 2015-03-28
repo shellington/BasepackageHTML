@@ -441,7 +441,15 @@
 
 				<p>
 					<code>git branch</code><br>
-					List all of the branches in your repository.
+					Lists the local branches in your repository.
+				</p>
+				<p>
+					<code>git branch -a</code><br>
+					Shows both remote and local branches
+				</p>
+				<p>
+					<code>git branch -r</code><br>
+					Shows remote branches
 				</p>
 				<p>
 					<code>git branch new-branch-name</code><br>
@@ -743,9 +751,13 @@
 										<code>git push origin --delete new-feature</code><br>
 										deletes the branch from the remote server
 									</p>
+								</li>								
+								<li>
+									<p>Update the <a href="#gh-pages">gh-pages</a> branch</p>
+									<p><code>git push -f origin master:gh-pages</code></p>
+									<p>we are using a forced (-f) push here - but this is ok as we will only ever want gh-pages to be an exact mirror copy of our remote Master branch. Using a forced push therefore saves time as we don't need to worry about merge conflicts, project history, etc on gh-pages - all our merging takes place between the development of our feature branches and master.</p>
 								</li>
 								<li>END</li>
-								<li>Update the <a href="#gh-pages">gh-pages</a> branch <a href="#gh-pages-inst">Jump to instructions &rsaquo;</a></li>
 							</ol>
 						</div>
 					</div>
@@ -773,16 +785,24 @@
 
 				<p>We have set up a branch called gh-pages in order to host BasepackageHTML on GitHub Pages i.e. <a href="http://phcreative.github.io/BasepackageHTML/" target="_blank">http://phcreative.github.io/BasepackageHTML/</a>
 
-				<p>Once you have finished working on BasepackageHTML and have merged your changes into master, you will then need to sync these changes into the gh-pages brance</p>
+				<p>Once you have finished working on BasepackageHTML and have merged your changes into master, you will then need to sync these changes into the gh-pages brance - I have opted to use the option: Merging via git push <a href="http://oli.jp/2011/github-pages-workflow/">jump to online source</a></p>
 
-				<h3 id="gh-pages-inst">Here's how to: Easily keep gh-pages in sync with master</h3>
-				<p><a href="http://lea.verou.me/2011/10/easily-keep-gh-pages-in-sync-with-master/" target="_blank">Jump to online source</a></p>
+				<p><code>git push -f origin master:gh-pages</code></p>
 
-				<p>...after you're local development work has been merged into master...</p>
-				<p><code>git checkout gh-pages</code> // go to the gh-pages branch</p>
-				<p><code>git rebase master</code> // bring gh-pages up to date with master</p>
-				<p><code>git push origin gh-pages</code> // commit the changes</p>
-				<p><code>git checkout master</code> // return to the master branch</p>
+				<p>This is the easiest option as:</p>
+
+				<ul>
+					<li>Our gh-pages branch will be an exact mirror or our master branch (this means if you've got the gh-pages branch locally it'll now be behind out remote version. <strong>However</strong>, using this method you can essentially ignore (or not even have / DELETE) the gh-pages branch LOCALLY.</li>
+					<li>The -f (force) makes the push happen even if the gh-pages branch is newer (avoiding a "non-fast-forward updates were rejected" error).</li>
+					<li>When using this method you shouldn't be working on gh-pages at all - i.e. only work on feature branches and merge these into master - gh-pages will only ever be a mirror of what we have in our CURRENT MASTER branch - so forcing an overwrite of gh-pages with our up to date master will be always be ok.</li>
+				</ul>
+
+				<p>If you're interested here are some guides on syncing up gh-pages:</p>
+
+				<ul>
+					<li><a href="http://oli.jp/2011/github-pages-workflow/">gh-pages workflow</a> - N.B. this one includes a summary of the second article listed below</li>
+					<li><a href="http://lea.verou.me/2011/10/easily-keep-gh-pages-in-sync-with-master/">Easily keep gh-pages in sync with master</a></li>
+				</ul>
 
 			</section>
 		</div>
