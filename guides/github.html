@@ -38,18 +38,19 @@
 					<a class="list-group-item" href="https://github.com/PhCreative/BasepackageHTML" target="_blank">
 						https://github.com/PhCreative/BasepackageHTML <i class="fa fa-chevron-right"></i>
 					</a>	
-					<a href="http://phcreative.github.io/BasepackageHTML/" target="_blank">
-						View the BasepackageHTML in the Browser <i class="fa fa-chevron-right"></i>
+					<a class="list-group-item" href="http://phcreative.github.io/BasepackageHTML/" target="_blank">
+						View the BasepackageHTML in the Browser (via the gh-pages branch) <i class="fa fa-chevron-right"></i>
 					</a>			
 				</div>
 
-				
+				<h2><a href="#workflow">Jump to Our Basepackage Workflow - A Quick Start</a></h2>
+
 				<h2>Getting started</h2>
 
 				<h3>Installing Git</h3> 
-				<p><strong>On Windows:</strong> bt installing <storng>GitHub for Windows</storng>. You can download this from the GitHub for Windows website, at <a href="http://windows.github.com" target="_blank">http://windows.github.com</a>.</p>
-				<p>The installer includes a command line version of Git (Git SHell) as well as the GUI. It also works well with Powershell, and sets up solid credential caching and sane CRLF settings.</p>
-				<p>Generally I think it is better to get to grips with and work with the command line rather than the GUI as you get more control and transparency in exactly what you are doing</p>				
+				<p><strong>On Windows:</strong> by installing <storng>GitHub for Windows</storng>. You can download this from the GitHub for Windows website, at <a href="http://windows.github.com" target="_blank">http://windows.github.com</a>.</p>
+				<p>The installer includes a command line version of Git (Git Shell) as well as the GUI. It also works well with Powershell, and sets up solid credential caching and sane CRLF settings.</p>
+				<p><strong>Generally I think it is better to get to grips with and work with the command line rather than the GUI as you get more control and transparency in exactly what you are doing</strong></p>				
 				
 				<hr>
 				
@@ -57,6 +58,8 @@
 				<p>Git Shell will automatically place you in your GitHub folder within your Documents folder. You can change into a different directory using 'cd' if wanted. Then run the following which will clone our Basepackage into a folder called BasepackageHTML</p>
 				<p><code>git clone https://github.com/PhCreative/BasepackageHTML.git</code></p>
 				
+				<p>N.B. We use grunt to run our websites locally. If this is the first time you are cloning this project onto your machine, navigate to the folder after cloning. Grab the folder address. Open command line and change into your directory ('cd'). Enter 'npm install'. This will install our node_modules folder. Once this has installed enter 'grunt' to start working locally. When staging and pushing your work back up to the remote repo don't worry about the node_modules folder, I have included a .gitignore file and set this folder to be ignored by git.</p>
+
 				<hr>
 
 				<h2>The basic Git workflow</h2>
@@ -67,85 +70,109 @@
 					<li>You do a <strong>COMMIT</strong>, which takes the files as they are in the staging area and stores that snapshot permanently to your Git directory.</li>
 				</ol>
 
-				<h3>git add</h3>
+				<hr>
+
+				<h3 id="add">git add</h3>
 				<p><a href="https://www.atlassian.com/git/tutorials/saving-changes/git-add" target="_blank">Jump to online source</a></p>
 
 				<p>The git add command adds a change in the working directory to the staging area. It tells Git that you want to include updates to a particular file in the next commit. However, git add doesn't really affect the repository in any significant way—changes are not actually recorded until you run git commit.</p>
 				<p>In conjunction with these commands, you'll also need git status to view the state of the working directory and the staging area.</p>
 				<p><code>git add &lt;file&gt;</code><br>add a file</p>
 				<p><code>git add &lt;directory&gt;</code><br>add a directory</p>
-				<p>Or some short cut commands that will adds / stages all of the files in the current directory without having to name them inidividually is <br>
+				<p>Or some short cut commands that adds / stages all of the files in the current directory without having to name them inidividually: <br>
 				<code>git add -A</code> Stages ALL modified files<br>
 				<code>git add .</code> stages new and modified, but NOT deleted files<br>
 				<code>git add -u</code> stages modified and deleted, but NOT new files</p>
-				<p>N.B. It is safe to use amy of the above shortcut commands as I have created a .gitignore file where you can list files NOT to be added/committed into the project e.g. the 'node_modules' folder created when we use grunt. Make sure you add any files to this list if you don't want to stage and commit them.</p>
+				<p>N.B. It is safe to use amy of the above shortcut commands as I have created a <strong>.gitignore file</strong> where you can list files NOT to be added/committed into the project e.g. the 'node_modules' folder created when we use grunt. Make sure you add any files/directories to this list if you don't want to stage and commit them.</p>
 
 				<hr>
 
-				<h3>git commit</h3>
+				<h3 id="commit">git commit</h3>
 				<p><a href="https://www.atlassian.com/git/tutorials/saving-changes/git-commit" target="_blank">Jump to online source</a></p>
 
-				<p>The git commit command commits the staged snapshot to the project history.</p>
-				<p><code>git commit</code></p>
-				<p>Commit the staged snapshot. This will launch a text editor prompting you for a commit message. After you’ve entered a message, save the file and close the editor to create the actual commit. </p>
-				<p><code>git commit -m "your commit message"</code></p>
-				<p>Commit the staged snapshot, but instead of launching a text editor, use enter a message into Git Shell directly - just saves a step in the process</message>
-				<p><code>git commit -a</code></p>
-				<p>Commit a snapshot of all changes in the working directory. This only includes modifications to tracked files (those that have been added with git add at some point in their history).</p>
+				<p>
+					<code>git commit</code><br>
+					This command commits the staged snapshot to the project history.
+				</p>
+				<p>Commit the staged snapshot. This will launch a text editor prompting you for a commit message. After you’ve entered a message, save the file and close the editor to create the actual commit.</p>
+				<p>
+					<code>git commit -m "your commit message"</code><br>
+					Commit the staged snapshot, but instead of launching a text editor, enter a message into Git Shell directly - just saves a step in the process
+				</p>
+				
+				<p>
+					<code>git commit -a</code><br>
+					Commit a snapshot of all changes in the working directory. This only includes modifications to tracked files (those that have been added with git add at some point in their history).
+				</p>
 
 				<hr>
 
-				<h3>git status</h3>
+				<h3 id="status">git status</h3>
 				<p><a href="https://www.atlassian.com/git/tutorials/inspecting-a-repository/git-status" target="_blank">Jump to online source</a></p>
 
-				<p>The git status command displays the state of the working directory and the staging area. It lets you see which changes have been staged, which haven'’'t, and which files aren't being tracked by Git. Status output does not show you any information regarding the committed project history. For this, you need to use git log.</p>
-				<p><code>git status</code></p>
-				<p>List which files are staged, unstaged, and untracked.</p>
-				<p>It's good practice to check the state of your repository before committing changes so that you don’t accidentally commit something you don't mean to.<br> Remember you can place files to be ignored into the .gitignore file e.g. node_modules, .pyc, .obj, .exe etc</p>
+				<p>The git status command displays the state of the working directory and the staging area. It lets you see which changes have been staged, which haven't, and which files aren't being tracked by Git. Status output does not show you any information regarding the committed project history. For this, you need to use git log.</p>
+				<p>
+					<code>git status</code><br>
+					Lists which files are staged, unstaged, and untracked.
+				</p>
+				<p><strong>It's good practice to check the state of your repository before committing changes so that you don’t accidentally commit something you don't mean to.</strong><br>
+				Remember you can place files to be ignored into the .gitignore file e.g. node_modules, .pyc, .obj, .exe etc</p>
 
 				<hr>
 
-				<h3>git log</h3>
+				<h3 id="log">git log</h3>
 				<p><a href="https://www.atlassian.com/git/tutorials/inspecting-a-repository/git-log" target="_blank">Jump to online source</a></p>
 
 				<p>The git log command displays committed snapshots. It lets you list the project history, filter it, and search for specific changes.</p>
-				<p><code>git log</code></p>
-				<p>Display the entire commit history using the default formatting. If the output takes up more than one screen, you can use Space to scroll and q to exit.</p>
+				<p>
+					<code>git log</code><br>
+					Displays the entire commit history using the default formatting. If the output takes up more than one screen, you can use 'space' to scroll and 'q' to exit.
+				</p>
 				<p>N.B. there are various commands that allow you to filter the results or change the way they are displayed - read the guides listed at the top to learn what options you have</p>
 
 				<hr>
 
-				<h3>git checkout</h3>
+				<h3 id="checkout">git checkout</h3>
 				<p><a href="https://www.atlassian.com/git/tutorials/viewing-old-commits" target="_blank">Jump to online source</a></p>
-				<p><a href="https://www.atlassian.com/git/tutorials/undoing-changes/git-checkout" target="_blank">Jump to online sourceII</a></p>
+				<p><a href="https://www.atlassian.com/git/tutorials/undoing-changes/git-checkout" target="_blank">Jump to online source II</a></p>
 
 				<p>The git checkout command serves three distinct functions: checking out files, checking out commits, and checking out branches.</p>
 
-				<p><code>git checkout master</code></p>
-				<p>Return to the master branch i.e. gets you back to the "current" state of your project.</p>
+				<p>
+					<code>git checkout master</code><br>
+					Returns you to the master branch i.e. gets you back to the "current" state of your project.
+				</p>
 
-				<p>Checking out a commit makes the entire working directory match that commit. This can be used to view an old state of your project without altering your current state in any way. Checking out a file lets you see an old version of that particular file, leaving the rest of your working directory untouched.</p>
-				<p> Once you've built up a project history, git checkout is an easy way to "load" any of these saved snapshots onto your development machine.</p>
-				<p>IMPORTANT NOTE: of the differences between checking out an old commit and checking out an old file</p>
-				<p><strong>Checking out an old commit</strong> is a READ-ONLY operation. It's impossible to harm your repository while viewing an old revision. The "current" state of your project (that you've committed) remains untouched in the master branch</p>
-				<p>On the other hand, <strong>checking out an old file</strong> does affect the current state of your repository. This usage of git checkout serves as a way to revert back to an old version of an individual file.</p>
-				<p>If you decide you don't want to keep the old version, you can check out the most recent version with the following: <code>git checkout HEAD name-of-file</code>*</p>
+				<p>Use <code>git log</code> to locate a particular commit you may want to checkout. In this way, once you've built up a project history, git checkout is an easy way to "load" any of these saved snapshots onto your development machine.</p>
+				<ul>
+					<li><strong>Checking out a commit</strong> makes the entire working directory match that commit. This can be used to view an old state of your project without altering your current state in any way.*</li>
+					<li><strong>Checking out a file</strong> lets you see an old version of that particular file, leaving the rest of your working directory untouched.*</li>
+				</ul>
+				
+				<p><strong>* IMPORTANT NOTE:</strong> of the differences between checking out an old commit and checking out an old file:</p>
+				<ul>
+					<li><strong>Checking out an old commit</strong> is a READ-ONLY operation. It's impossible to harm your repository while viewing an old revision. The "current" state of your project (that you've committed) remains untouched in the master branch</li>
+					<li><strong>checking out an old file</strong> does affect the current state of your repository. This usage of git checkout serves as a way to revert back to an old version of an individual file.<br>
+					If you decide you don't want to keep the old version, you can check out the most recent version with the following: <code>git checkout HEAD name-of-file</code>*</li>
+				</ul>
 
-				<p>* A quick not on HEAD: How does Git know what branch you're currently on? It keeps a special pointer called HEAD. In Git, this is a pointer to the local branch you're currently on. In this case, you're still on master. To switch between existing branches, you run the git checkout command. (see more on branches later). Essentially, the HEAD is Git’s way of referring to the current snapshot.</p>
+				<p>* A quick not on <strong>HEAD</strong>: How does Git know what branch you're currently on? It keeps a special pointer called HEAD. In Git, this is a pointer to the local branch you're currently on. In this case, you're still on master. To switch between existing branches, you run the git checkout command. (<a href="#branches">see more on branches later</a>). Essentially, the HEAD is Git's way of referring to the current snapshot.</p>
 
 				<p>Run <code>git checkout master</code> to return to your master branch. Here you can run <code>git revert</code> or <code>git reset</code> to undo any undesired change if needed</p>
 
 				<hr>
 
-				<h3>git revert</h3>
+				<h3 id="revert">git revert</h3>
 				<p><a href="https://www.atlassian.com/git/tutorials/undoing-changes/git-revert" target="_blank">Jump to online source</a></p>
 
-				<p>revert is a "safe" way to undo changes</p>
+				<p>revert is a <strong>"safe"</strong> way to undo changes</p>
 
 				<p>The git revert command undoes a committed snapshot. But, instead of removing the commit from the project history, it figures out how to undo the changes introduced by the commit and appends a new commit with the resulting content. This prevents Git from losing history, which is important for the integrity of your revision history and for reliable collaboration.</p>
 
-				<p><code>git revert &lt;commit&gt;</code></p>
-				<p>Generate a new commit that undoes all of the changes introduced in &lt;commit&gt;, then apply it to the current branch.</p>
+				<p>
+					<code>git revert &lt;commit&gt;</code><br>
+					Generate a new commit that undoes all of the changes introduced in &lt;commit&gt;, then apply it to the current branch.
+				</p>
 
 				<p>Reverting should be used when you want to remove an entire commit from your project history.</p>
 
@@ -154,41 +181,48 @@
 
 				<hr>
 
-				<h3>git reset</h3>
+				<h3 id="reset">git reset</h3>
 				<p><a href="https://www.atlassian.com/git/tutorials/undoing-changes/git-reset" target="_blank">Jump to online source</a></p>
 
-				<p>git reset as the dangerous method to undo changes</p>
+				<p>git reset is the <strong>"dangerous"</strong> method to undo changes</p>
 				<p>When you undo with git reset there is no way to retrieve the original copy - it is a permanent undo</p>
 				<p>Generally AVOID using this option unless necessary</p>
-				<p>It can be useful for clearing you're staged area however (i.e. after adding filed but before committing them)</p>
-				<p><code>git reset &lt;file&gt;</code></p>
-				<p>Remove the specified file from the staging area, but leave the working directory unchanged. This unstages a file without overwriting any changes.</p>
-				<p><code>git reset</code></p>
-				<p>Reset the staging area to match the most recent commit, but leave the working directory unchanged. This unstages all files without overwriting any changes, giving you the opportunity to re-build the staged snapshot from scratch. N.B. <code>git reset --hard</code> would also reset the working directory i.e. obliterates all local changes that you have not yet committed - good if you have screwed up locally and want to start again!</p>
-				<p><code>git reset &lt;commit&gt;</code></p>
-				<p>Move the current branch tip backward to &lt;commit&gt;, reset the staging area to match, but leave the working directory alone. All changes made since &lt;commit&gt; will reside in the working directory, which lets you re-commit the project history using cleaner, more atomic snapshots.</p>
+				<p>It can be useful for clearing you're local staged area however (i.e. after adding/modifying files but before committing them to the project history)</p>
+				<p>
+					<code>git reset &lt;file&gt;</code><br>
+					Remove the specified file from the staging area, but leave the working directory unchanged. This unstages a file without overwriting any changes
+				</p>
+				<p>
+					<code>git reset</code><br>
+					Reset the staging area to match the most recent commit, but leave the working directory unchanged. This unstages all files without overwriting any changes, giving you the opportunity to re-build the staged snapshot from scratch. N.B. <code>git reset --hard</code> would also reset the working directory i.e. obliterates all local changes that you have not yet committed - good if you have screwed up locally and want to start again!
+				</p>
+				<p>
+					<code>git reset &lt;commit&gt;</code><br>
+					Move the current branch tip backward to &lt;commit&gt;, reset the staging area to match, but leave the working directory alone. All changes made since &lt;commit&gt; will reside in the working directory, which lets you re-commit the project history using cleaner, more atomic snapshots.
+				</p>
 
-				<h3 style="color:#ff0000;">THE DANGER ZONE</h3>
+				<h3 style="color:#ff0000;">THE DANGER ZONE!!!</h3>
 				<p><code>git reset --hard &lt;commit&gt;</code></p>
-				<p>Move the current branch tip backward to &lt;commit&gt; and reset both the staging area and the working directory to match. <strong style="color:#ff0000;">This obliterates not only the uncommitted changes, but all commits after &lt;commit&gt;, as well.</strong></p>
-				<p style="color:#ff0000;"><strong>Don't Reset Public History</strong>.</p>
-				<p> You should never use git reset &lt;commit&gt; when any snapshots after &lt;commit&gt; have been pushed to a public repository. After publishing a commit, you have to assume that other developers are reliant upon it.</p>
+				<p>Moves the current branch tip backward to &lt;commit&gt; and resets both the staging area and the working directory to match.</p>
+				<p><strong style="color:#ff0000;">This obliterates not only the uncommitted changes, but all commits after &lt;commit&gt;, as well.</strong></p>
+				<p style="color:#ff0000;"><strong>Don't Reset Public History</strong>.<br>
+				You should never use git reset &lt;commit&gt; when any snapshots after &lt;commit&gt; have been pushed to a public repository. After publishing a commit, you have to assume that other developers are reliant upon it.</p>
 				
 
 				<h3> git reset - summary</h3>
 				<p>Without the --hard flag, git reset is a way to clean up a repository by unstaging changes or uncommitting a series of snapshots and re-building them from scratch. The --hard flag comes in handy when an experiment has gone horribly wrong and you need a clean slate to work with.</p>
-				<p>Whereas reverting is designed to safely undo a public commit, git reset is designed to undo local changes. Because of their distinct goals, the two commands are implemented differently: resetting completely removes a changeset, whereas reverting maintains the original changeset and uses a new commit to apply the undo.</p>
+				<p><strong>Whereas reverting is designed to safely undo a public commit, git reset is designed to undo local changes.</strong> Because of their distinct goals, the two commands are implemented differently: resetting completely removes a changeset, whereas reverting maintains the original changeset and uses a new commit to apply the undo.</p>
 				<p style="color:green;"><strong>The point is</strong>, make sure that you're using git reset &lt;commit&gt; on a local experiment that went wrong—not on published changes. If you need to fix a public commit, the git revert command was designed specifically for this purpose.</p>
 
 				<hr>
 
-				<h3>git clean</h3>
+				<h3 id="clean">git clean</h3>
 				<p><a href="https://www.atlassian.com/git/tutorials/undoing-changes/git-clean" target="_blank">Jump to online source</a></p>
 
 				<p>The git clean command removes untracked files from your working directory. Like an ordinary rm command, git clean is not undoable, so make sure you really want to delete the untracked files before you run it.</p>
 				<p>The git clean command is often executed in conjunction with git reset --hard. Remember that resetting only affects tracked files, so a separate command is required for cleaning up untracked ones. Combined, these two commands let you return the working directory to the exact state of a particular commit.</p>
 				<p>Summary</p>
-				<p>The git reset --hard and git clean -f commands are your best friends after you've made some embarrassing developments in your local repository and want to burn the evidence. Running both of them will make your working directory match the most recent commit, giving you a clean slate to work with.</p>
+				<p>The git <code>reset --hard</code> and <code>git clean -f</code> commands are your best friends after you've made some embarrassing developments in your local repository and want to burn the evidence. Running both of them will make your working directory match the most recent commit, giving you a clean slate to work with.</p>
 
 				<hr>
 
@@ -214,10 +248,10 @@
 
 				<hr>
 
-				<h3>git rebase</h3>
+				<h3 id="rebase">git rebase</h3>
 				<p><a href="https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase" target="_blank">Jump to online source</a></p>
 
-				<p>This is especially useful when working with branches. Rebasing is the process of moving a branch to a new base commit i.e. from one commit to another. It's literally rewriting your project history</p>
+				<p><strong>This is especially useful when working with branches.</strong> Rebasing is the process of moving a branch to a new base commit i.e. from one commit to another. It's literally rewriting your project history</p>
 				<p>The primary reason for rebasing is to maintain a linear project history.<br>
 				i.e. say the master branch has progressed since you started working on a feature. You have two options for integrating your feature into the master branch: merging directly or rebasing and then merging. The former option results in a 3-way merge and a merge commit, while the latter results in a fast-forward merge and a perfectly linear history. Ultimately rebase just creates a tidier history.</p>
 				<p>N.B. <strong>Don't Rebase Public History</strong><br>
@@ -243,11 +277,12 @@
 
 				<hr>
 
-				<h3>git rebase -i</h3>
+				<h3 id="rebase-i">git rebase -i</h3>
 				<p><a href="https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase-i" target="_blank">Jump to online source</a></p>
 
 				<p>Running git rebase with the -i flag begins an interactive rebasing session. Instead of blindly moving all of the commits to the new base, interactive rebasing gives you the opportunity to alter individual commits in the process. This lets you clean up history by removing, splitting, and altering an existing series of commits. It's like git commit --amend on steroids.</p>
-				<p>This opens an editor where you can enter commands for each commit to be rebased. These commands determine how individual commits will be transferred to the new base. You can also reorder the commit listing to change the order of the commits themselves.</p>
+				<p>This opens an editor (e.g. notepad) where you can enter commands for each commit to be rebased. These commands determine how individual commits will be transferred to the new base. You can also reorder the commit listing to change the order of the commits themselves.</p>
+				<p>Once finished just save and close the editor and the rebase will automatically continue in git shell</p>
 
 				<hr>
 
@@ -263,37 +298,51 @@
 
 				<hr>
 
-				<h3>git remote</h3>
+				<h3 id="remote">git remote</h3>
 				<p><a href="https://www.atlassian.com/git/tutorials/syncing/git-remote" target="_blank">Jump to online source</a></p>
 
 				<p>The git remote command lets you create, view, and delete connections to other repositories.</p>
 
-				<p><code>git remote</code></p>
-				<p>List the remote connections you have to other repositories.</p>
-				<p><code>git remote -v</code></p>
-				<p>Same as the above command, but include the URL of each connection.</p>
-				<p><code>git remote add &lt;name&gt; &lt;url&gt;</code></p>
-				<p>Create a new connection to a remote repository. After adding a remote, you'll be able to use &lt;name&gt; as a convenient shortcut for &lt;url&gt; in other Git commands.</p>
-				<p><code>git remote rm &lt;name&gt;</code></p>
-				<p>Remove the connection to the remote repository called &lt;name&gt;.</p>
-				<p><code>git remote rename &lt;old-name&gt; &lt;new-name&gt;</code></p>
-				<p>Rename a remote connection from &lt;old-name&gt; to &lt;new-name&gt;.</p>
+				<p>
+					<code>git remote</code><br>
+					List the remote connections you have to other repositories.
+				</p>
+				<p>
+					<code>git remote -v</code><br>
+					Same as the above command, but include the URL of each connection.
+				</p>
+				<p>
+					<code>git remote add &lt;name&gt; &lt;url&gt;</code><br>
+					Create a new connection to a remote repository. After adding a remote, you'll be able to use &lt;name&gt; as a convenient shortcut for &lt;url&gt; in other Git commands.
+				</p>
+				<p>
+					<code>git remote rm &lt;name&gt;</code><br>
+					Remove the connection to the remote repository called &lt;name&gt;.
+				</p>
+				<p>
+					<code>git remote rename &lt;old-name&gt; &lt;new-name&gt;</code><br>
+					Rename a remote connection from &lt;old-name&gt; to &lt;new-name&gt;.
+				</p>
 
-				<p><strong>A note on ORIGIN</strong></p>
-				<p>When you clone a repository with git clone, it automatically creates a remote connection called <strong>origin</strong> which points back to the cloned repository. This provides an easy way to pull upstream changes or publish local commits.</p>
+				<p><strong>A note on ORIGIN</strong><br>
+				When you clone a repository with git clone, it automatically creates a remote connection called <strong>origin</strong> which points back to the cloned repository. This provides an easy way to pull upstream changes or publish local commits.</p>
 
 				<hr>
 
-				<h3>git fetch</h3>
+				<h3 id="fetch">git fetch</h3>
 				<p><a href="https://www.atlassian.com/git/tutorials/syncing/git-fetch" target="_blank">Jump to online source</a></p>
 
-				<p>The git fetch command imports commits from a remote repository into your local repo. <strong>The resulting commits are stored as remote branches</strong> instead of the normal local branches that we'’'ve been working with. <strong>This gives you a chance to review changes before integrating them into your (local working) copy of the project.</strong></p>
+				<p>The git fetch command imports commits from a remote repository into your local repo. <strong>The resulting commits are stored as remote branches</strong> instead of the normal local branches that we've been working with. <strong>This gives you a chance to review changes before integrating them into your (local working) copy of the project.</strong></p>
 
-				<p><code>git fetch &lt;remote&gt;</code></p>
-				<p>Fetch all of the branches from the repository. This also downloads all of the required commits and files from the other repository.</p>
+				<p>
+					<code>git fetch &lt;remote&gt;</code><br>
+					Fetch all of the branches from the repository. This also downloads all of the required commits and files from the other repository.
+				</p>
 
-				<p><code>git fetch &lt;remote&gt; &lt;branch&gt;</code></p>
-				<p>Same as the above command, but only fetch the specified branch.</p>
+				<p>
+					<code>git fetch &lt;remote&gt; &lt;branch&gt;</code><br>
+					Same as the above command, but only fetch the specified branch.
+				</p>
 
 				<p><strong>Summary</strong></p>
 				<p>Since fetched content is represented as a remote branch, it has absolutely no effect on your local development work. This makes fetching a safe way to review commits before integrating them with your local repository</p>
@@ -303,38 +352,44 @@
 				<p>e.g. workflow</p>
 				<p><code>git fetch origin</code></p>
 				<p>This will display the branches that were downloaded.</p>
-				<p>To approve the changes and merge them into your local master branch with the following commands:</p>
+				<p>To approve the changes and merge them into your local master branch use the following commands:</p>
 				<p><code>git checkout master</code></p>
-				<p><code>git log origin/master</code><br> origin/master being a remote branch that was downloaded</p>
-				<p><code>git merge origin/master</code></p>
-				<p>The origin/master and master branches now point to the same commit, and you are synchronized with the upstream developments.</p>
+				<p><code>git log origin/master</code><br> view the history - origin/master being a remote branch that was downloaded in the fetch command</p>
+				<p>
+					<code>git merge origin/master</code><br>
+					The origin/master and master branches now point to the same commit, and you are synchronized with the upstream developments.
+				</p>
 
 				<hr>
 
-				<h3>git pull</h3>
+				<h3 id="pull">git pull</h3>
 				<p><a href="https://www.atlassian.com/git/tutorials/syncing/git-pull" target="_blank">Jump to online source</a></p>		
 
-				<p>You can think of git pull as Git's version of svn update.</p>
+				<p><strong>You can think of git pull as Git's version of svn update.</strong></p>
 				<p>Merging upstream changes into your local repository is a common task in Git-based collaboration workflows. We already know how to do this with git fetch followed by git merge, but git pull rolls this into a single command.</p>
 
-				<p><code>git pull &lt;remote&gt;</code></p>
-				<p>Fetch the specified remote's copy of the current branch and immediately merge it into the local copy.</p>
+				<p>
+					<code>git pull &lt;remote&gt;</code><br>
+					Fetch the specified remote's copy of the current branch and immediately merge it into the local copy.
+				</p>
 
-				<p><code>git pull --rebase &lt;remote&gt;</code></p>
-				<p>Same as the above command, but instead of using git merge to integrate the remote branch with the local one, use git rebase.</p>
-				<p>The --rebase option can be used to ensure a linear history by preventing unnecessary merge commits. Many developers prefer rebasing over merging</p>
+				<p>
+					<code>git pull --rebase &lt;remote&gt;</code><br>
+					Same as the above command, but instead of using git merge to integrate the remote branch with the local one, use git rebase.
+				</p>
+				<p>The <code>--rebase</code> option can be used to ensure a linear history by preventing unnecessary merge commits. Many developers prefer rebasing over merging</p>
 
-				<p>Example common workflow</p>
-				<p>The following example demonstrates how to synchronize with the central repository's master branch:</p>
-				<p><code>git checkout master</code><br> swithces to your local MASTER branch</p>
+				<p><strong>Example common workflow</strong><br>
+				The following example demonstrates how to synchronize with the central repository's master branch:</p>
+				<p><code>git checkout master</code><br> swithces to your LOCAL MASTER branch</p>
 				<p><code>git pull --rebase origin</code><br> This simply moves your local changes onto the top of what everybody else has already contributed.</p>
 
 				<hr>
 
-				<h3>git push</h3>
+				<h3 id="push">git push</h3>
 				<p><a href="https://www.atlassian.com/git/tutorials/syncing/git-push" target="_blank">Jump to online source</a></p>
 
-				<p>Pushing is how you transfer commits from your local repository to a remote repo.</p>
+				<p>Pushing is how you transfer commits from your LOCAL repository to a REMOTE (public) repo.</p>
 
 				<p><code>git push &lt;remote&gt; &lt;branch&gt;</code></p>
 				<p>e.g. <code>git push origin master</code></p>
@@ -342,15 +397,20 @@
 				<p>So, if the remote history has diverged from your history, you need to pull the remote branch and merge it into your local one, then try pushing again.</p>
 				<p><strong>This is similar to how SVN makes you synchronize with the central repository via svn update before committing a changeset.</strong></p>
 
+				<p>
+					<code>git push &lt;remote&gt; --all</code><br>
+					Push all of your local branches to the specified remote.
+				</p>
+
+				<h3 style="color:#ff0000;">THE DANGER ZONE!!!</h3>
 				<p><code>git push &lt;remote&gt; --force</code></p>
 				<p>Same as the above command, but force the push even if it results in a non-fast-forward merge. <strong style="color:#ff0000;">Do not use the --force flag unless you're absolutely sure you know what you're doing.</strong></p>
 				<p style="color:#ff0000;">The only time you should ever need to force push is when you realize that the commits you just shared were not quite right and you fixed them with a git commit --amend or an interactive rebase. However, you must be absolutely certain that none of your teammates have pulled those commits before using the --force option.</p>
 
-				<p><code>git push &lt;remote&gt; --all</code></p>
-				<p>Push all of your local branches to the specified remote.</p>
+				
 
 				<h2 style="green">Example Workflow</h2>
-				<p>The following example describes one of the standard methods for publishing local contributions to the central repository. First, it makes sure your local master is up-to-date by fetching the central repository's copy and rebasing your changes on top of them. The interactive rebase is also a good opportunity to clean up your commits before sharing them. Then, the git push command sends all of the commits on your local master to the central repository.</p>
+				<p>The following example describes one of the standard methods for publishing local contributions to the central repository.</p>				
 
 				<p><code>git checkout master</code></p>
 				<p><code>git fetch origin master</code></p>
@@ -358,11 +418,13 @@
 				<p># Squash commits, fix up commit messages etc. N.B. could instead do git rebase withiout the -i option</p>
 				<p><code>git push origin master</code></p>
 
+				<p>First, it makes sure your local master is up-to-date by fetching the central repository's copy and rebasing your changes on top of them. The interactive rebase - <code> rebase -i</code> - is also a good opportunity to clean up your commits before sharing them. Then, the git push command sends all of the commits on your local master to the central repository.</p>
+
 				<p>Since we already made sure the local master was up-to-date, this should result in a fast-forward merge, and git push should not complain about any of the non-fast-forward issues discussed above.</p>
 
 				<hr>
 
-				<h2>Using Branches</h2>
+				<h2 id="branches">Using Branches</h2>
 				<p><a href="https://www.atlassian.com/git/tutorials/using-branches" target="_blank">Jump to online source</a></p>
 
 				<h3>git branch</h3>
@@ -373,33 +435,59 @@
 				<p>You can think of them as a way to request a brand new working directory, staging area, and project history. New commits are recorded in the history for the current branch, which results in a fork in the history of the project.</p>
 				<p>The git branch command lets you create, list, rename, and delete branches. It doesn’t let you switch between branches or put a forked history back together again.</p>
 
-				<p><code>git branch</code></p>
-				<p>List all of the branches in your repository.</p>
-				<p><code>git branch new-branch-name</code></p>
-				<p>Create a new branch called new-branch-name. This does not check out the new branch.</p>
-				<p>To start adding commits to it, you need to select it with git checkout, e.g. <code>git checkout new-branch-name</code>, and then use the standard git add and git commit commands. Please see the git checkout section of this module for more information.</p>
-				<p><code>git branch -d &lt;branch&gt;</code></p>
-				<p>Delete the specified branch. This is a “safe” operation in that Git prevents you from deleting the branch if it has unmerged changes.</p>
-				<p><code>git branch -D &lt;branch&gt;</code></p>
-				<p>Force delete the specified branch, even if it has unmerged changes. This is the command to use if you want to permanently throw away all of the commits associated with a particular line of development.</p>
-				<p><code>git branch -m &lt;branch&gt;</code></p>
-				<p>Rename the current branch to &lt;branch&gt;.</p>
+				<p>
+					<code>git branch</code><br>
+					List all of the branches in your repository.
+				</p>
+				<p>
+					<code>git branch new-branch-name</code><br>
+					Create a new branch called new-branch-name. This does not check out the new branch. <a href="#new-branch-checkout">See how to create and checkout in one step</a>
+				</p>
+				<p>To start adding commits to it, you need to select it with git checkout, e.g. <code>git checkout new-branch-name</code>, and then use the standard git add and git commit commands.</p>
+
+				<p>
+					<code>git branch -d &lt;branch&gt;</code><br>
+					Delete the specified branch. This is a “safe” operation in that Git prevents you from deleting the branch if it has unmerged changes.
+				</p>
+				
+				<p>
+					<code>git branch -D &lt;branch&gt;</code><br>
+					Force delete the specified branch, even if it has unmerged changes. This is the command to use if you want to permanently throw away all of the commits associated with a particular line of development.
+				</p>
+
+				<p>
+					<code>git push origin --delete branchName</code>
+					To delete a remote branch from the remote repo
+				</p>
+				
+				<p>
+					<code>git branch -m &lt;branch&gt;</code><br>
+					Rename the current branch to &lt;branch&gt;.
+				</p>
 
 				<hr>
 
-				<h3>git checkout</h3>
+				<h3 id="checkout">git checkout</h3>
 				<p><a href="https://www.atlassian.com/git/tutorials/using-branches/git-checkout" target="_blank">Jump to online source</a></p>
 
-				<p>The git checkout command lets you navigate between the branches created by git branch. Checking out a branch updates the files in the working directory to match the version stored in that branch, and it tells Git to record all new commits on that branch. Think of it as a way to select which line of development you’re working on.</p>
+				<p>The git checkout command lets you navigate between the branches created by git branch. Checking out a branch updates the files in the working directory to match the version stored in that branch, and it tells Git to record all new commits on that branch. <strong>Think of it as a way to select which line of development you’re working on.</strong></p>
 
-				<p><code>git checkout existing-branch</code></p>
-				<p>Check out the specified branch, which should have already been created with git branch. This makes "existing-branch" the current branch, and updates the working directory to match.</p>
-				<p><code>git checkout -b new-branch</code></p>
-				<p>Create and check out "new-branch" in one go. The -b option is a convenience flag that tells Git to run <code>git branch new-branch</code> before running <code>git checkout new-branch</code>.</p>
-				<p><code>git checkout -b new-branch existing-branch</code></p>
-				<p>Same as the above invocation, but base the new branch off of existing-branch instead of the current branch (the current branch may be master for example).</p>
+				<p>
+					<code>git checkout existing-branch</code><br>
+					Check out the specified branch, which should have already been created with git branch. This makes "existing-branch" the current branch, and updates the working directory to match.
+				</p>
+				
+				<p id="new-branch-checkout">
+					<code>git checkout -b new-branch</code><br>
+					Create and check out "new-branch" in one go. The -b option is a convenience flag that tells Git to run <code>git branch new-branch</code> before running <code>git checkout new-branch</code>.
+				</p>
+				
+				<p>
+					<code>git checkout -b new-branch existing-branch</code><br>
+					Same as the above invocation, but base the new branch off of existing-branch instead of the current branch (the current branch may be master for example).
+				</p>
 
-				<h4>Exampe Process</h4>
+				<h4>Example Process</h4>
 				<p>Create a dedicated branch and switch into it:</p>
 				<p><code>git branch new-feature</code></p>
 				<p><code>git checkout new-feature</code></p>
@@ -414,14 +502,17 @@
 
 				<hr>
 
-				<h3>git merge</h3>
+				<h3 id="merge">git merge</h3>
 				<p><a href="https://www.atlassian.com/git/tutorials/using-branches/git-merge" target="_blank">Jump to online source</a></p>
 
 				<p>Merging is Git's way of putting a forked history (branches) back together again.</p>
-				<p>N.B. all of the commands merge into the <strong>current branch</strong> (whichever you have checked out e.g. master). The current branch will be updated to reflect the merge, but the target branch (the development branch being merged into the current one, e.g. master) will be completely unaffected. Again, this means that git merge is often used in conjunction with git checkout for selecting the current branch and git branch -d for deleting the obsolete target branch once merging has finished.</p>
+				<p>N.B. all of the commands merge into the <strong>current branch</strong> (whichever you have checked out e.g. master). The current branch will be updated to reflect the merge, but the target branch (the development branch being merged into the current one) will be completely unaffected. Again, this means that git merge is often used in conjunction with git checkout for selecting the current branch and git branch -d for deleting the obsolete target branch once merging has finished.</p>
 
-				<p><code>git merge branch-name</code></p>
-				<p>Merge the specified branch into the current branch. Git will determine the merge algorithm automatically, i.e. a fast-forward merge or a 3-way merge.</p>
+				<p>
+					<code>git merge branch-name</code><br>
+					Merge the specified branch into the current branch. Git will determine the merge algorithm automatically, i.e. a fast-forward merge or a 3-way merge.
+				</p>
+
 				<p><strong>A fast-forward merge</strong> can occur when there is a linear path from the current branch tip to the target branch. All Git has to do to integrate the histories is move (i.e., "fast forward") the current branch tip up to the target branch tip.</p>
 				<p>However, a fast-forward merge is not possible if the branches have diverged. When there is not a linear path to the target branch, Git has no choice but to combine them via a <strong>3-way merge</strong>. Git uses three commits to generate the merge commit: the two branch tips and their common ancestor.</p>
 				<p>(remember we can use --rebase to create fast-forward merges with a tidier combined history, when a 3-way merge would otherwise be used).</p>
@@ -442,151 +533,220 @@
 
 				<hr>
 
-				<h3>Centralized Workflow</h3>
-				<p><a href="https://www.atlassian.com/git/tutorials/comparing-workflows/centralized-workflow" target="_blank">Jump to online source</a></p>
+				<h2>The most basic workflow</h2>
 
-				<p>This workflow mirrors a standard SVN (subversion) way of working, i.e. it doesn't incorporate branches - good for small teams with simple development setups that won't require developers to be working on numerous patches that could span over days</p>
+				<div class="panel panel-default">
+				    <div class="panel-heading" role="tab" id="headingOne">
+				      	<h3 style="margin:10px 0;" class="panel-title">
+				        	<a style="text-decoration:none;" class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+								Centralized Workflow <i class="fa fa-chevron-down"></i>
+							</a>
+						</h3>
+					</div>
+					<div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      					<div class="panel-body">
+							<p><a href="https://www.atlassian.com/git/tutorials/comparing-workflows/centralized-workflow" target="_blank">Jump to online source</a></p>
 
-				<p>Like Subversion, the Centralized Workflow uses a central repository to serve as the single point-of-entry for all changes to the project. This default development branch is called master and all changes are committed into this branch. This workflow doesn't require any other branches besides master.</p>
+							<p>This workflow mirrors a standard SVN (subversion) way of working, i.e. it doesn't incorporate branches - good for small teams with simple development setups that won't require developers to be working on numerous patches that could span over days</p>
 
-				<p>Developers start by cloning the central repository. In their own local copies of the project, they edit files and commit changes as they would with SVN; however, these new commits are stored locally—they’re completely isolated from the central repository. This lets developers defer synchronizing upstream until they’re at a convenient break point.</p>
+							<p>Like Subversion, the Centralized Workflow uses a central repository to serve as the single point-of-entry for all changes to the project. This default development branch is called master and all changes are committed into this branch. This workflow doesn't require any other branches besides master.</p>
 
-				<p>To publish changes to the official project, developers “push” their local master branch to the central repository. This is the equivalent of svn commit, except that it adds all of the local commits that aren’t already in the central master branch.</p>
+							<p>Developers start by cloning the central repository. In their own local copies of the project, they edit files and commit changes as they would with SVN; however, these new commits are stored locally—they’re completely isolated from the central repository. This lets developers defer synchronizing upstream until they’re at a convenient break point.</p>
 
-				<p>Before the developer can publish their feature, they need to fetch the updated central commits and rebase their changes on top of them. The result is a perfectly linear history, just like in traditional SVN workflows.</p>
+							<p>To publish changes to the official project, developers “push” their local master branch to the central repository. This is the equivalent of svn commit, except that it adds all of the local commits that aren’t already in the central master branch.</p>
 
-				<p>If local changes directly conflict with upstream commits, Git will pause the rebasing process and give you a chance to manually resolve the conflicts</p>
+							<p>Before the developer can publish their feature, they need to fetch the updated central commits and rebase their changes on top of them. The result is a perfectly linear history, just like in traditional SVN workflows.</p>
 
-				<h3>The workflow</h3>
-				<ol>
-					<li><p>The central repository is created on a server - https://github.com/PhCreative/BasepackageHTML</p></li>
-					<li><p>Each developer creates a local copy of the entire project. This is accomplished via the git clone command: git clone https://github.com/PhCreative/BasepackageHTML.git</p></li>					
-					<li>
-						<p>In their local repository, each developer can develop features using the standard Git commit process: edit, stage, and commit.</p>
-						<p>e.g.<br>
-							<code>git status</code> # View the state of the repo<br>
-							<code>git add some-file</code> # Stage a file<br>
-							<code>git commit</code> # Commit a file "some-file"
-						</p>
-					</li>
-					<li>
-						<p>Once finished each developer should publish their local commits to the central repository so other team members can access it.</p>
-						<p><code>git push origin master</code></p>
-					</li>
-					<li>
-						<p>At this point a merge conflict may arise if another team member has pushed changes in the meantime, these can be resolved via:</p>
-						<p><code>git pull --rebase origin master</code></p>
-						<p>N.B.The pull would still work if you forgot the <code>-- rebase</code> option, but you would wind up with a superfluous "merge commit" every time someone needed to synchronize with the central repository. For this workflow, it's always better to rebase instead of generating a merge commit.</p>
-						<p>Rebasing works by transferring each local commit to the updated master branch one at a time. This means that you catch merge conflicts on a commit-by-commit basis rather than resolving all of them in one massive merge commit.</p>
-						<p>This makes it much easier to figure out where bugs were introduced and, if necessary, to roll back changes with minimal impact on the project.</p>
-					</li>
-					<li>
-						<p>If the merge conflict requires editing, run <code>git status</code> to see where the problem is, edit the files as required, re-stage the, and continue with the rebase, i.e.</p>
-						<p>
-							<code>git add some-file</code><br>
-							<code>git rebase --continue</code>
-						</p>
-					</li>
-					<li>
-						<p>If at any stage during the git pull --rabase scenario you get completely lost and want to start over just run<br>
-						<code>git rebase --abort</code></p>
-					</li>
-					<li>
-						<p>Finally, after you've synchronized with the central repository, you can publish your changes successfully:<br>
-						<code>git push origin master</code></p>
-					</li>
-				</ol>
+							<p>If local changes directly conflict with upstream commits, Git will pause the rebasing process and give you a chance to manually resolve the conflicts</p>
 
-				<hr>
-
-				<h3>Feature Branch Workflow</h3>
-				<p><a href="https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow" target="_blank">Jump to online source</a></p>
-
-				<p>Once you've got the hang of the Centralized Workflow, adding feature branches to your development process is easy</p>
-
-				<p>The core idea behind the Feature Branch Workflow is that all feature development should take place in a dedicated branch instead of the master branch</p>
-
-				<p>Side Note (probably a bit too advanced/not really required for working on BasepackageHTML): Encapsulating feature development also makes it possible to leverage <a href="https://www.atlassian.com/git/tutorials/making-a-pull-request" target="_blank"a>pull requests</a>. These are a way to initiate discussions around a branch, ask for suggestions and give other developers the opportunity to sign off on a feature before it gets integrated into the official project.</p>
-
-				<h4>How the Feature Branck Workflow Works</h4>
-				<p>The Feature Branch Workflow still uses a central repository, and master still represents the official project history. But, instead of committing directly on their local master branch, developers create a new branch every time they start work on a new feature. Feature branches should have descriptive names, like 'animated-menu-items', 'navigation fix', etc. The idea is to give a clear, highly-focused purpose to each branch.</p>
-				<p>developers can edit, stage, and commit changes to a feature branch just as they did in the Centralized Workflow</p>
-				<p>Feature branches should then be pushed to the central (master) repository.</p>
-				<p>The actual act of publishing a feature is much the same as in the Centralized Workflow. First, you need to make sure your local master is synchronized with the upstream master. Then, you merge the feature branch into master and push the updated master back to the central repository.</p>
-
-				<h3>The Workflow</h3>
-				<ol>
-					<li>
-						<p>Create an isolated 'feature' branch to work on</p>
-						<p><code>git checkout -b my-new-feature master</code></p>
-						<p>This checks out a branch called my-new-feature based on master, and the -b flag tells Git to create the branch if it doesn’t already exist - in one step!</p>
-					</li>
-					<li>
-						<p>On this branch you can then edit, stage, and commit changes as required, e.g.</p>
-						<p>
-							<code>git status</code><br>
-							<code>git add some-file</code><br>
-							<code>git commit</code>
-						</p>						
-					</li>
-					<li>
-						<p>At some stage you'll need to push your feature branch up to the central repository - both to backup your work and give other developers access to your commits</p>
-						<p><code>git push -u origin my-new-feature</code></p>
-						<p>This command pushes my-new-feature to the central repository (origin), and the -u flag adds it as a remote tracking branch. After setting up the tracking branch, you can call git push without any parameters to push your feature.</p>
-					</li>
-					<li>
-						<p>When you've finished on your feature, before merging it into master, you should make sure the central repository has your most recent commits.</p>
-						<p><code>git push</code></p>
-					</li>
-					<li>
-						<p>When ready to finally merge the new feature into the stable project (master):</p>
-						<p>							
-							<code>git checkout master</code><br>
-							<code>git pull</code><br>
-							<code>git pull origin my-new-feature</code><br>
-							<code>git push</code>
-						</p>
-						<p>First, check out your master branch and make sure it's up to date.</p>
-						<p>Then, <code>git pull origin my-new-feature</code> merges the central repository's copy of my-new-feature.*<br>
-						<small>*You could also use a simple git merge my-new-feature, but the command shown above makes sure you're always pulling the most up-to-date version of the feature branch.</small></p>
-						<p>Finally, the updated master needs to get pushed back to origin.</p>
-						<p>N.B> This process often results in a merge commit. If you would prefer a linear history, it's possible to rebase the feature onto the tip of master before executing the merge, resulting in a fast-forward merge. i.e. run this before git checkoutmaster<br>
-						<code>git pull origin master</code><br>
-						<code>git rebase master</code>
-						</p>
-					</li>
-					<li>
-						<p>Yopu can delete the new feature branch when finiched with it</p>
-						<p><code>git branch -D my-new-feature</code></p>
-					</li>
-				</ol>
+							<h3>The workflow</h3>
+							<ol>
+								<li><p>The central repository is created on a server - https://github.com/PhCreative/BasepackageHTML</p></li>
+								<li><p>Each developer creates a local copy of the entire project. This is accomplished via the git clone command: git clone https://github.com/PhCreative/BasepackageHTML.git</p></li>					
+								<li>
+									<p>In their local repository, each developer can develop features using the standard Git commit process: edit, stage, and commit.</p>
+									<p>e.g.<br>
+										<code>git status</code> # View the state of the repo<br>
+										<code>git add some-file</code> # Stage a file<br>
+										<code>git commit</code> # Commit a file "some-file"
+									</p>
+								</li>
+								<li>
+									<p>Once finished each developer should publish their local commits to the central repository so other team members can access it.</p>
+									<p><code>git push origin master</code></p>
+								</li>
+								<li>
+									<p>At this point a merge conflict may arise if another team member has pushed changes in the meantime, these can be resolved via:</p>
+									<p><code>git pull --rebase origin master</code></p>
+									<p>N.B.The pull would still work if you forgot the <code>-- rebase</code> option, but you would wind up with a superfluous "merge commit" every time someone needed to synchronize with the central repository. For this workflow, it's always better to rebase instead of generating a merge commit.</p>
+									<p>Rebasing works by transferring each local commit to the updated master branch one at a time. This means that you catch merge conflicts on a commit-by-commit basis rather than resolving all of them in one massive merge commit.</p>
+									<p>This makes it much easier to figure out where bugs were introduced and, if necessary, to roll back changes with minimal impact on the project.</p>
+								</li>
+								<li>
+									<p>If the merge conflict requires editing, run <code>git status</code> to see where the problem is, edit the files as required, re-stage the, and continue with the rebase, i.e.</p>
+									<p>
+										<code>git add some-file</code><br>
+										<code>git rebase --continue</code>
+									</p>
+								</li>
+								<li>
+									<p>If at any stage during the git pull --rabase scenario you get completely lost and want to start over just run<br>
+									<code>git rebase --abort</code></p>
+								</li>
+								<li>
+									<p>Finally, after you've synchronized with the central repository, you can publish your changes successfully:<br>
+									<code>git push origin master</code></p>
+								</li>
+							</ol>
+						</div>
+					</div>
+				</div>
 
 				<hr>
 
-				<h3>Github Workflow</h3>
-				<p><a href="http://mettadore.com/2011/09/07/the-ever-deployable-github-workflow/" target="_blank">Jump to online source</a></p>
+				<h2 id="workflow">Proposed workflow to follow for our BasepackageHtml</h2>
 
-				<p>The premise: Anything in the master branch is deployable</p>
-				<p>To work on something new, create a descriptively named branch off of master (eg: new-feature)</p>
-				<p><code>git checkout -b new-feature</code></p>
-				<p>Commit locally and rebase your branch to master regularly. Push your branch to the server often- so your team all know what's being worked on</p>
-				<p>
-					<code>git commit</code><br>
-					<code>git checkout master</code><br>
-					<code>git pull origin master</code><br>
-					<code>git checkout new-feature</code><br>
-					<code>git rebase master</code><br>
-					<code>git push origin new-feature</code><br>
-				</p>	
-				<p>When it is ready to all be updated to master you can rebase the branch to master, then merge it into master</p>
-				<p><code>git rebase master</code></p>
-				<p><code>git checkout master</code></p>
-				<p><code>git merge new-feature</code></p>
-				<p>By rebasing your branch to master, you put all of your changes on top of the master branch allowing for a fast-forward merge and always results in a clean merge to master.</p>
+				<div class="panel panel-default">
+				    <div class="panel-heading" role="tab" id="headingTwo">
+				      	<h3 style="margin:10px 0;" class="panel-title">
+				        	<a style="text-decoration:none;" class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+								Feature Branch / Github Workflow <i class="fa fa-chevron-down"></i>
+							</a>
+						</h3>
+					</div>
+					<div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+      					<div class="panel-body">
+				
+							<ul>
+								<li>
+									Feature Branch Workflow: <a href="https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow" target="_blank">Jump to online source</a>
+								</li>
+								<li>
+									Github Workflow (The premise: Anything in the master branch is deployable): <a href="http://mettadore.com/2011/09/07/the-ever-deployable-github-workflow/" target="_blank">Jump to online source</a>
+									
+								</li>
+							</ul>
+
+							<p>Both of these workflows follow the same pattern and I will refer to them as <strong>The Feature Branch Workflow</strong>.</p>
+
+							<p>Once you've got the hang of the Centralized Workflow, adding feature branches to your development process is easy</p>
+							
+							<p>The core idea behind the Feature Branch Workflow is that all feature development should take place in a dedicated branch instead of the master branch</p>
+
+							<p><small>Side Note: Encapsulating feature development also makes it possible to leverage <a href="https://www.atlassian.com/git/tutorials/making-a-pull-request" target="_blank"a>pull requests</a>, (Unnecessarily too advanced and not required for working on BasepackageHTML). These are a way to initiate discussions around a branch, ask for suggestions and give other developers the opportunity to sign off on a feature before it gets integrated into the official project.</small></p>
+
+							<h4>How the Feature Branck Workflow Works</h4>
+							<p>The Feature Branch Workflow still uses a central repository, and master still represents the official project history. But, instead of committing directly on their local master branch, developers create a new branch every time they start work on a new feature. Feature branches should have descriptive names, like 'animated-menu-items', 'navigation fix', etc. The idea is to give a clear, highly-focused purpose to each branch.</p>
+							<p>developers can edit, stage, and commit changes to a feature branch just as they did in the Centralized Workflow</p>
+							<p>Feature branches should then be pushed to the central (master) repository.</p>
+							<p>The actual act of publishing a feature is much the same as in the Centralized Workflow. First, you need to make sure your local master is synchronized with the upstream master. Then, you merge the feature branch into master and push the updated master back to the central repository.</p>
+
+							<h3>The Workflow</h3>
+							<ol>
+								<li>
+									<p>First, make sure your local master is up ro date with your remote master</p>
+									<p>
+										<code>git checkout master</code> - set your HEAD to point to your local master<br>
+										<code>git pull origin master</code> - update your local master with the remote master at origin<br>
+									</p>
+								</li>
+								<li>
+									<p>To work on something new, create a descriptively named feature <a href="#branches">branch</a> off of master (eg: new-feature)</p>
+									<p><code>git checkout -b new-feature master</code></p>
+									<p>This checks out a branch called my-new-feature based on master, and the -b flag tells Git to create the branch if it doesn't already exist - in one step!</p>
+								</li>
+								<li>
+									<p>On this branch you can then edit, <a href="#add">stage/add</a>, and <a href="#commit">commit</a> changes as required, e.g.</p>
+									<p>
+										<code>git status</code><br>
+										<code>git add some-file</code> | <code>git add -A</code> | <code>git add .</code> | <code>git add -u</code>
+									</p>											
+									<p>Commit locally and <a href="#rebase">rebase</a> your branch to master regularly.</p>
+									<p>							
+										<code>git commit</code><br>
+										<code>git checkout master</code><br>
+										<code>git pull origin master</code><br>
+										<code>git checkout new-feature</code><br>
+										<code>git rebase master</code>
+									</p>
+								</li>
+								<li>
+									<p><a href="#push">Push</a> your branch to the server often - so your team all know what's being worked on</p>
+									<p>
+										<code>git push origin new-feature</code><br>
+									</p>	
+								</li>
+								<li>Repeat steps 1 -> 3 as you continue to work locally</li>
+								<li>
+									<p>When it is ready to all be updated to master you can rebase the branch to master, then merge it into master</p>
+									<p>
+										<code>git checkout new-feature</code><br>
+										<code>git rebase master</code> or <code>git rebase -i master</code>*<br>
+										<code>git checkout master</code><br>
+										<code>git merge new-feature</code>
+									</p>
+
+									<p>By <a href="#rebase">rebasing</a> your branch to master, you put all of your changes on top of the master branch allowing for a fast-forward merge and always results in a clean merge to master.</p>
+									<p>* <code>git rebase -i master</code> - this options lets you wrap up all of your local commits you've made while working on this feature into ONE commit by performing an <a href="#rebase-i">interactive rebase</a></p>
+
+									<p>If you choose to do an interactive rebase there will be a few more steps:</p>
+									<ol style="list-style-type: lower-roman;">
+										<li>
+											<p>Your text editor will open, combine all commits into one by 'squashing' every commit into the first, e.g.
+											</p>
+											<p>
+												<code>pick ae3a3dc Adding first part of new feature</code><br>
+												<code>squash 3c82ad8 Adding second part</code>
+											</p>
+										</li>
+										<li>
+											<p>Then 'pretty up' your single commit message, e.g.
+											</p>
+											<p>
+												<code>[#123456] My Cool New Feature</code><br>
+												<code>* Adding first part</code><br>
+												<code>* Adding second part</code>
+											</p>
+										</li>
+										<li>To continue with the interactive rebase simply save (ctrl + s) and close the editor</li>
+									</ol>
+								</li>
+								<li>
+									<p>
+										OPTIONAL: Add any tags that you wish to, e.g. version number<br>
+										<code>git tag 1.0.0</code>
+									</p>
+								</li>
+								<li>
+									<p>
+										<a href="#push">Push</a> to the remote master<br>
+										<code>git push origin master</code>
+									</p>
+									<p>
+										and push tags (if any were created)<br>
+										<code>git push origin --tags</code>
+									</p>
+								</li>
+								<li>
+									<p>Delete the <strong>new-feature</strong> branches (local and remote) at the end of your work</p>
+
+									<p>
+										<code>git branch -D new-feature</code><br>
+										deletes the branch locally (including it's commit history)<br>
+										<code>git push origin --delete new-feature</code><br>
+										deletes the branch from the remote server
+									</p>
+								</li>
+								<li>END</li>
+								<li>Update the <a href="#gh-pages">gh-pages</a> branch <a href="#gh-pages-inst">Jump to instructions &rsaquo;</a></li>
+							</ol>
+						</div>
+					</div>
+				</div>
 
 				<hr>
 
-				<h2>github pages</h2>
+				<h2 id="gh-pages">github pages (gh-pages branch)</h2>
 
 				<p>GitHub Pages just lets you launch a simple static website that you can host for free.</p>
 				<p>Normally when you host stuff on GitHub, you’re just storing your files there. If you push site files, what you’re storing is the code, and when you view a file, you’re viewing the code rather than the output. What GitHub Pages lets you do is store those files, and if they’re HTML files, you can view them like any other website, so there’s no need to host them separately yourself.</p>				
@@ -608,7 +768,7 @@
 
 				<p>Once you have finished working on BasepackageHTML and have merged your changes into master, you will then need to sync these changes into the gh-pages brance</p>
 
-				<h3>Here's how to: Easily keep gh-pages in sync with master</h3>
+				<h3 id="gh-pages-inst">Here's how to: Easily keep gh-pages in sync with master</h3>
 				<p><a href="http://lea.verou.me/2011/10/easily-keep-gh-pages-in-sync-with-master/" target="_blank">Jump to online source</a></p>
 
 				<p>...after you're local development work has been merged into master...</p>
