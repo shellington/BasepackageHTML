@@ -10,9 +10,21 @@
 /* ==========================================================================
 #Table layout
 ========================================================================== */
+.col-table {
+	display: table;
+	width:100%;
+	table-layout: fixed;
+	> div {
+		display: table-cell;
+		vertical-align: middle;
+		float:none;
+	}
+}
 @media (min-width: $screen-sm) {
 	.col-sm-table {
 		display: table;
+		width:100%;
+		table-layout: fixed;
 		> div {
 			display: table-cell;
 			vertical-align: middle;
