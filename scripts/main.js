@@ -166,6 +166,13 @@ define(['jquery'], function ($) {
         });
     }
 
+    // thumbnails Switcher e.g. Product Images Switcher
+    if ('#thumbs img') {
+	    $('#thumbs img').click(function(){
+		    $('#large-image').attr('src', $(this).data('image'));
+		});
+	}
+
 // end doc ready	
 });
 
