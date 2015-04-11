@@ -1,12 +1,12 @@
 
-@import "pattern/vars";
+@import "skin/vars";
 @import "bootstrap";
 @import "mixins/spread-value";
 
 @import "fontawesome/font-awesome";
 
-@import "pattern/global";
-@import "pattern/layouts";
+@import "skin/global";
+@import "skin/layouts";
 
 @import "plugins/animate";
 @import "plugins/magnific";
@@ -16,16 +16,16 @@
 
 //SassInsertLeaveAsIs
 
-@import "pattern/blog";
-@import "pattern/widgets";
-@import "pattern/grid";
-@import "pattern/footer";
-@import "pattern/header";
+@import "skin/blog";
+@import "skin/widgets";
+@import "skin/grid";
+@import "skin/footer";
+@import "skin/header";
 
-@import "pattern/bootstrap_grid_override";
+@import "skin/bootstrap_grid_override";
 
-@import "pattern/modules/fullscreen-mast";
-@import "pattern/modules/mobile-nav-on-desktop";
+@import "skin/modules/fullscreen-mast";
+@import "skin/modules/mobile-nav-on-desktop";
 
 // Style up input errors
 // This is based on jquery-validation
