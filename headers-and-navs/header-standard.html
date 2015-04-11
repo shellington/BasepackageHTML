@@ -122,8 +122,12 @@
 
 	<script src="/BasepackageHTML/scripts/plugins/require.js"></script>
     <script>
-    require(['/BasepackageHTML/scripts/app.js'], function () {
-      require(['windowScroll', 'stickyHeader']);
+    require(['/BasepackageHTML/scripts/app.js'], function () {  
+    	/* 
+			If you need a 'Sticky Header' uncomment the below and include the following files from our BasePackageHTML git repo:
+			- /BasepackageHTML/scripts/modules/sticky-header.js
+    	*/
+    	//require(['/BasepackageHTML/scripts/modules/sticky-header.js']);
     })
     </script>
 </body>

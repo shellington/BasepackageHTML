@@ -2,6 +2,9 @@
 *  main.js
 *  Requires: jQuery
 *  Copyright 2015 Ph.Creative
+*  Some core common js functions (usage based on html classes)
+*  REMEMBER to remove any functions and their associated plugins from app.js 
+*  if not needed at the end of build
 **/
 var verticalAlign = function (e) {
     var $content = $(e);

@@ -21,12 +21,7 @@ require.config({
     "isotope": "plugins/jquery.isotope.min",
     "imagesLoaded": "plugins/jquery.imagesloaded.pkgd.min",
     "bridget": "plugins/jquery.bridget",
-    "magnific": "plugins/jquery.magnific-popup.min",
-    "smartmenu": "plugins/jquery.smartmenus",
-    "smartmenuAddon": "plugins/jquery.smartmenus.bootstrap",
-    "windowScroll": "plugins/windowscroll",
-    "fullscreenMast": "modules/fullscreen-mast",
-    "stickyHeader": "modules/sticky-header"
+    "magnific": "plugins/jquery.magnific-popup.min"
   },
   shim: {
     "jquery": {
@@ -91,21 +86,6 @@ require.config({
     },
     "magnific": {
       "deps": ["jquery"]
-    },
-    "smartmenu": {
-      "deps": ["jquery"]
-    },
-    "smartmenuAddon": {
-      "deps": ["jquery", "smartmenu"]
-    },
-    "fullscreenMast": {
-      "deps": ["jquery"] 
-    },
-    "windowScroll": {
-      "deps": ["jquery"] 
-    },
-    "stickyHeader": {
-      "deps": ["jquery", "windowScroll"] 
     }
   }
 });
