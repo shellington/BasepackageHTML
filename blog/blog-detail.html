@@ -31,7 +31,7 @@
 					<article class="post">
 						<div class="row">
 							<div class="col-sm-6">
-								<img src="http://placehold.it/750x710" class="img-responsive blog-image" alt="">
+								<img src="http://placehold.it/750x715" class="img-responsive blog-image" alt="">
 							</div>
 							<div class="col-sm-6">
 								<h3>An article title which may go over two lines</h3>          
@@ -60,7 +60,7 @@
 				            <ul class="list-unstyled">
 			                    <li><a class="btn btn-primary wow fadeIn" data-wow-delay="0.10s" title="" href="">Development</a></li>
 			                    <li><a class="btn btn-primary wow fadeIn" data-wow-delay="0.20s" title="" href="">Social Media</a></li>
-			                    <li><a class="btn btn-primary wow fadeIn" data-wow-delay="0.30s" title="" href="">Web</a></li>			                    
+			                    <li><a class="btn btn-primary wow fadeIn" data-wow-delay="0.30s" title="" href="">Web</a></li>                    
 				            </ul>
 				        </div>
 
@@ -92,14 +92,15 @@
                                 </ul>
                             </div>
                             </div>
-                        </div>
-
+                        </div>                        
 						
 						<section class="author media" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
 
                             <h3 class="title-author">Author</h3>
                             <div class="photo media-left">
-                                <a href=""><img src="https://placeimg.com/120/120/animals" itemprop="image" alt="alt" class="img-responsive media-object" /></a>
+                                <a href="">
+                                    <img class="gravatar media-object" itemprop="image" alt="alt" src="http://placehold.it/65X65" />
+                                </a>
                             </div>
 
                             <div class="bio media-body">
@@ -243,14 +244,8 @@
                                                         <input type="text" value="" name="HoneyPot" id="HoneyPot" data-val-range-min="0" data-val-range-max="0" data-val-range="Please leave this field blank" data-val="true" class="text-box single-line">
                                                         <span data-valmsg-replace="true" data-valmsg-for="HoneyPot" class="field-validation-valid"></span>
                                                     </div>
-                                                    <div class="col-lg-12">
-
-                                                        <input type="hidden" value="1212" name="BlogNodeId" id="BlogNodeId" data-val-required="The BlogNodeId field is required." data-val-number="The field BlogNodeId must be a number." data-val="true">
-                                                        <input type="hidden" value="1222" name="BlogPostId" id="BlogPostId" data-val-required="The BlogPostId field is required." data-val-number="The field BlogPostId must be a number." data-val="true">
-                                                        <input type="hidden" value="635581431227312636" name="Check" id="Check" data-val-required="The Check field is required." data-val-number="The field Check must be a number." data-val="true">
-                                                        <input type="hidden" value="NOPD2fCnx2q3Iv6LGGzV2hOl7nXoLp3ycade1E0JHuYINqJLnRFuq_U4zfz7OyZt4eSr5BhqWZUT502zNdkmGV_pgRjrcFwqannD1koo7p81" name="__RequestVerificationToken">
-
-                                                        <input type="submit" class="btn btn-primary wow tada" value="Submit comment" name="comment-submit-button">
+                                                    <div class="col-lg-12"> 
+                                                        <button type="submit" class="btn btn-primary btn-block">Submit <i class="fa fa-chevron-right"></i></button>
                                                     </div>
                                                 </div>
                                             </form>

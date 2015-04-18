@@ -21,12 +21,12 @@
 		text-decoration: none;
 	}
 	.grid-item {
-		@include spread-value(margin-top, 20px, 40px); //equivalent 30px -> 50px
+		@include spread-value(margin-top, 20px, 40px);
 	}
 }
 
 .grid-pagination {
-	@include spread-value(margin-top, 20px, 40px); //equivalent 30px -> 50px	
+	@include spread-value(margin-top, 20px, 40px);
 }
 
 /* ==========================================================================
@@ -36,7 +36,7 @@
 .grid.grid-title-boxes {
 	a {
 		h4 {
-			padding: 15px 10px; // equivalent 20px 10px
+			padding: 15px 10px;
 			background: $link-color;
 			color:#fff;
 			font-size: 17px;
@@ -125,73 +125,168 @@
 }
 
 /* ==========================================================================
-#grid sizes
+#grid sizes / clears
 ========================================================================== */
-.grid-md {
-	// col classes: col-ms-6 col-sm-4 col-md-3
-	.grid-item {
-		@media (min-width: $screen-xs-min) and (max-width: $screen-sm - 1) {
-			&:nth-of-type(2n+1) {
-				clear: left;
-			}
+
+
+.grid-item {
+	// xs clears
+	&.col-xs-6 {
+		@media (max-width: $screen-xs - 1) {
+			// clear previous
+			&:nth-of-type(3n+1) {clear: none;}
+			&:nth-of-type(4n+1) {clear: none;}	
+			// set new
+			&:nth-of-type(2n+1) {clear: left;}
 		}
+	}
+	&.col-xs-4 {
+		@media (max-width: $screen-xs - 1) {
+			// clear previous
+			&:nth-of-type(2n+1) {clear: none;}
+			&:nth-of-type(4n+1) {clear: none;}	
+			// set new
+			&:nth-of-type(3n+1) {clear: left;}
+		}
+	}
+	&.col-xs-3 {
+		@media (max-width: $screen-xs - 1) {
+			// clear previous
+			&:nth-of-type(2n+1) {clear: none;}
+			&:nth-of-type(3n+1) {clear: none;}	
+			// set new
+			&:nth-of-type(4n+1) {clear: left;}
+		}
+	}
+	// ms clears
+	&.col-ms-6 {
+		@media (min-width: $screen-xs) and (max-width: $screen-sm - 1) {
+			// clear previous
+			&:nth-of-type(3n+1) {clear: none;}
+			&:nth-of-type(4n+1) {clear: none;}	
+			// set new
+			&:nth-of-type(2n+1) {clear: left;}
+		}
+	}
+	&.col-ms-4 {
+		@media (min-width: $screen-xs) and (max-width: $screen-sm - 1) {
+			// clear previous
+			&:nth-of-type(2n+1) {clear: none;}
+			&:nth-of-type(4n+1) {clear: none;}	
+			// set new
+			&:nth-of-type(3n+1) {clear: left;}
+		}
+	}
+	&.col-ms-3 {
+		@media (min-width: $screen-xs) and (max-width: $screen-sm - 1) {
+			// clear previous
+			&:nth-of-type(2n+1) {clear: none;}
+			&:nth-of-type(3n+1) {clear: none;}	
+			// set new
+			&:nth-of-type(4n+1) {clear: left;}
+		}
+	}
+	// sm clears
+	&.col-ms-6,
+	&.col-sm-6 {
 		@media (min-width: $screen-sm) and (max-width: $screen-md - 1) {
-			&:nth-of-type(3n+1) {
-				clear: left;
-			}
-		}
-		@media (min-width: $screen-md) {
-			&:nth-of-type(4n+1) {
-				clear: left;
-			}
+			// clear previous
+			&:nth-of-type(3n+1) {clear: none;}
+			&:nth-of-type(4n+1) {clear: none;}	
+			// set new
+			&:nth-of-type(2n+1) {clear: left;}
 		}
 	}
-}
-
-.grid-lg {
-	// col classes: col-ms-6 col-sm-4
-	.grid-item {
-		@media (min-width: $screen-xs-min) and (max-width: $screen-sm - 1) {
-			&:nth-of-type(2n+1) {
-				clear: left;
-			}
-		}
-		@media (min-width: $screen-sm) {
-			&:nth-of-type(3n+1) {
-				clear: left;
-			}
+	&.col-ms-4,
+	&.col-sm-4 {
+		@media (min-width: $screen-sm) and (max-width: $screen-md - 1) {
+			// clear previous
+			&:nth-of-type(2n+1) {clear: none;}
+			&:nth-of-type(4n+1) {clear: none;}
+			// set new
+			&:nth-of-type(3n+1) {clear: left;}
 		}
 	}
-}
-
-.grid-md-sidebar {
-	// col classes: col-ms-6 col-md-4
-	.grid-item {
-		@media (min-width: $screen-xs-min) and (max-width: $screen-md - 1) {
-			&:nth-of-type(2n+1) {
-				clear: left;
-			}
-		}
-		@media (min-width: $screen-md) {
-			&:nth-of-type(3n+1) {
-				clear: left;
-			}
+	&.col-ms-3,
+	&.col-sm-3 {
+		@media (min-width: $screen-sm) and (max-width: $screen-md - 1) {
+			// clear previous
+			&:nth-of-type(2n+1) {clear: none;}
+			&:nth-of-type(3n+1) {clear: none;}
+			// set new
+			&:nth-of-type(4n+1) {clear: left;}
 		}
 	}
-}
-
-.grid-lg-sidebar {
-	// col classes: col-ms-6 col-lg-4
-	.grid-item {
-		@media (min-width: $screen-xs-min) and (max-width: $screen-lg - 1) {
-			&:nth-of-type(2n+1) {
-				clear: left;
-			}
+	// md clears
+	&.col-ms-6,
+	&.col-sm-6,
+	&.col-md-6 {
+		@media (min-width: $screen-md) and (max-width: $screen-lg - 1) {
+			// clear previous
+			&:nth-of-type(3n+1) {clear: none;}
+			&:nth-of-type(4n+1) {clear: none;}	
+			// set new		
+			&:nth-of-type(2n+1) {clear: left;}
 		}
+	}
+	&.col-ms-4,
+	&.col-sm-4,
+	&.col-md-4 {
+		@media (min-width: $screen-md) and (max-width: $screen-lg - 1) {
+			// clear previous
+			&:nth-of-type(2n+1) {clear: none;}
+			&:nth-of-type(4n+1) {clear: none;}
+			// set new
+			&:nth-of-type(3n+1) {clear: left;}
+		}
+	}
+	&.col-ms-3,
+	&.col-sm-3,
+	&.col-md-3 {
+		@media (min-width: $screen-md) and (max-width: $screen-lg - 1) {
+			// clear previous
+			&:nth-of-type(2n+1) {clear: none;}
+			&:nth-of-type(3n+1) {clear: none;}
+			// set new
+			&:nth-of-type(4n+1) {clear: left;}
+		}
+	}
+
+	// lg clears
+	&.col-ms-6,
+	&.col-sm-6,
+	&.col-md-6,
+	&.col-lg-6 {
 		@media (min-width: $screen-lg) {
-			&:nth-of-type(3n+1) {
-				clear: left;
-			}
+			// clear previous
+			&:nth-of-type(3n+1) {clear: none;}
+			&:nth-of-type(4n+1) {clear: none;}	
+			// set new
+			&:nth-of-type(2n+1) {clear: left;}
+		}
+	}
+	&.col-ms-4,
+	&.col-sm-4,
+	&.col-md-4,
+	&.col-lg-4 {
+		@media (min-width: $screen-lg) {
+			// clear previous
+			&:nth-of-type(2n+1) {clear: none;}
+			&:nth-of-type(4n+1) {clear: none;}	
+			// set new
+			&:nth-of-type(3n+1) {clear: left;}
+		}
+	}
+	&.col-ms-3,
+	&.col-sm-3,
+	&.col-md-3,
+	&.col-lg-3 {
+		@media (min-width: $screen-lg) {
+			// clear previous
+			&:nth-of-type(2n+1) {clear: none;}
+			&:nth-of-type(3n+1) {clear: none;}	
+			// set new
+			&:nth-of-type(4n+1) {clear: left;}
 		}
 	}
 }

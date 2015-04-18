@@ -1,11 +1,10 @@
 /* Table of Contents
 ==================================================
     
-    #Typography    
-    #links
+    #Typography        
     #cms-content
+    #links
     #tools
-    #forms
     #buttons
     #breadcrumb
     #pagination
@@ -30,7 +29,7 @@
 .page-header {
 	margin-top:0;
 	@include spread-value(font-size, $font-size-h1, $font-size-h1-small);
-	@include spread-value(margin-bottom, 10px, 25px); //equivalent 15px -> 30px
+	@include spread-value(margin-bottom, 10px, 20px); 
 	padding:0;
 	border:none;
 }
@@ -49,74 +48,15 @@ a:focus {
 }
 
 blockquote {
-
 	p {
 		margin-bottom: 10px;
 	}
-
 	small {
 		font-style: normal;
 		text-align: right;
 	}
 	cite {
 		font-style: normal;
-	}
-}
-
-/* ==========================================================================
-#Links
-========================================================================== */
-
-.link-arrow {
-	position: relative;
-	padding-right: 25px;
-	text-decoration: none;
-	font-weight: 700;
-	color: $link-color;
-	&:after {
-	    content: "\f178";
-	    font-family: FontAwesome;
-	    font-style: normal;
-	    font-weight: normal;
-	    text-decoration: inherit;
-	    color: inherit;
-	    font-size: 18px;
-	    position: absolute;
-	    right: 0;
-	    top: -2px;
-	}
-	&:hover,
-	&:focus {
-		text-decoration: none;	
-	}
-}
-
-.link-back {
-	position: relative;
-	padding-left: 25px;
-	text-decoration: none !important;
-	font-weight: 700;
-	display: inline-block;
-	color: $link-color;
-	&:before {
-	    content: "\f177";
-	    font-family: FontAwesome;
-	    font-style: normal;
-	    font-weight: normal;
-	    text-decoration: inherit;
-	    color: inherit;
-	    font-size: 18px;
-	    position: absolute;
-	    left: 0;
-	    top: -1px;
-	}
-	&:hover,
-	&:focus {
-		text-decoration: none;
-		color: $text-color;	
-		&:before {
-			color: $text-color;		
-		}
 	}
 }
 
@@ -129,27 +69,27 @@ blockquote {
 	h3, .h3,
 	h4, .h4, 
 	h5, .h5 {		
-		@include spread-value(margin-top, 25px, 45px); //equivalent 30px -> 50px
+		@include spread-value(margin-top, 20px, 40px);
 	}
 	h2, .h2 {
 		@include spread-value(font-size, $font-size-h2-small, $font-size-h2);
-		@include spread-value(margin-bottom, 15px, 25px); //equivalent 20px -> 30px		
+		@include spread-value(margin-bottom, 10px, 20px);
 	}
 	h3, .h3 {
 		@include spread-value(font-size, $font-size-h3-small, $font-size-h3);
-		@include spread-value(margin-bottom, 15px, 25px); //equivalent 20px -> 30px
+		@include spread-value(margin-bottom, 10px, 20px);
 		color: inherit;
 	}
 	h4, .h4 {
 		font-size: $font-size-h4;
-		@include spread-value(margin-bottom, 10px, 20px); //equivalent 15px -> 25px
+		@include spread-value(margin-bottom, 5px, 10px); 
 	}
 	h5, .h5 {
 		font-size: $font-size-h5;
-		@include spread-value(margin-bottom, 10px, 20px); //equivalent 15px -> 25px
+		@include spread-value(margin-bottom, 5px, 10px); 
 	}
 	p {
-		@include spread-value(margin-bottom, 10px, 25px); //equivalent 15px -> 35px
+		@include spread-value(margin-bottom, 10px, 25px);
 	}
 	a {
 		text-decoration: underline;
@@ -157,7 +97,7 @@ blockquote {
 	ul, ol {
 		padding:0;
 		margin:0;
-		@include spread-value(margin-bottom, 10px, 25px); //equivalent 15px -> 35px
+		@include spread-value(margin-bottom, 15px, 30px); 
 	}
 
 	ul {
@@ -212,9 +152,9 @@ blockquote {
 	img {
 		max-width: 100%;
 		height: auto !important;
+		@include spread-value(margin-bottom, 15px, 30px); 
 	}
     
-
 	img[align="left"],
 	img[style*="float: left"],
 	img[style*="float:left"],
@@ -298,12 +238,70 @@ blockquote {
 }// .cms-content
 
 /* ==========================================================================
+#Links
+========================================================================== */
+
+.link-arrow {
+	position: relative;
+	padding-right: 25px;
+	text-decoration: none;
+	font-weight: 700;
+	color: $link-color;
+	&:after {
+	    content: "\f178";
+	    font-family: FontAwesome;
+	    font-style: normal;
+	    font-weight: normal;
+	    text-decoration: inherit;
+	    color: inherit;
+	    font-size: 18px;
+	    position: absolute;
+	    right: 0;
+	    top: -2px;
+	}
+	&:hover,
+	&:focus {
+		text-decoration: none;	
+	}
+}
+
+.link-back {
+	position: relative;
+	padding-left: 25px;
+	text-decoration: none !important;
+	font-weight: 700;
+	display: inline-block;
+	color: $link-color;
+	&:before {
+	    content: "\f177";
+	    font-family: FontAwesome;
+	    font-style: normal;
+	    font-weight: normal;
+	    text-decoration: inherit;
+	    color: inherit;
+	    font-size: 18px;
+	    position: absolute;
+	    left: 0;
+	    top: -1px;
+	}
+	&:hover,
+	&:focus {
+		text-decoration: none;
+		color: $text-color;	
+		&:before {
+			color: $text-color;		
+		}
+	}
+}
+
+
+/* ==========================================================================
 #tools
 ========================================================================== */
 
 .tel,
 .tel a {
-	text-decoration: none;
+	text-decoration: none !important;
 	cursor:default;
 	color: inherit;
 }
@@ -497,16 +495,13 @@ blockquote {
 	}
 }
 
-/* ==========================================================================
-#forms
-========================================================================== */
-
-span.required {
-	color: #ff0000;
-}
-.form {
-	.btn {
-		margin-top: 10px;
+.padded-text {	
+	.text {
+		background-color: #f6f6f6;
+		@include spread-value(padding-top, 25px, 40px); //equivalent 30px -> 50px
+		@include spread-value(padding-bottom, 25px, 45px); //equivalent 30px -> 50px
+		@include spread-value(padding-left, 15px, 50px); //equivalent 20px -> 50px
+		@include spread-value(padding-right, 15px, 50px); //equivalent 20px -> 50px
 	}
 }
 
@@ -599,20 +594,20 @@ span.required {
 	h4 {
 		font-size: 18px;
 		margin-top: 0;
-		margin-bottom: 12px; // equivalent 20px
+		margin-bottom: 15px;
 	}
 	.media-body {
 		padding-left: 10px;
 		p {
-			margin-bottom: 12px; // equivalent 20px
+			margin-bottom: 15px;
 		}
 		time {
 			color: $link-color;
-			margin-top: 12px; // equivalent 20px
+			margin-top: 15px; //
 			display: block;
 		}
 		.social ul {
-			margin-top: 12px;
+			margin-top: 15px;
 			margin-bottom: 0;
 			li:first-child a {
 				padding-left:0;
@@ -643,7 +638,7 @@ span.required {
 	}			
 	*[class^='col-'], *[class*=' col-'] {
 		padding:0;
-		margin-bottom: 25px; // equivalent 30px
+		margin-bottom: 25px; 
 	}	
 }
 
@@ -662,7 +657,7 @@ span.required {
 }
 .search-results {
 	li {
-		margin-bottom: 20px; // equivalent 30px
+		margin-bottom: 20px; 
 	}
 }
 
@@ -681,6 +676,7 @@ span.required {
 /* ==========================================================================
 #select2
 ========================================================================== */
-.select2 {
-	width: 300px;
+
+.select2-container {
+	width:100% !important;
 }

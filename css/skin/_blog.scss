@@ -42,11 +42,11 @@
 	}
 	.image {
 		display: block;
-		@include spread-value(margin-bottom, 18px, 25px); //equivalent 20px -> 30px
+		@include spread-value(margin-bottom, 10px, 20px);
 	}	
 	.post-meta {
 		@include spread-value(font-size, 16px, 18px);
-		@include spread-value(margin-bottom, 10px, 20px); //equivalent 20px -> 30px
+		@include spread-value(margin-bottom, 10px, 20px);
 
 		a {
 			color: $link-color;
@@ -55,7 +55,7 @@
 			}
 		}
 		p {
-			margin-top: 10px; // equivalent 25px
+			margin-top: 10px;
 		}
 	}
 }
@@ -68,12 +68,12 @@
 	h3 {
 		color: $text-color;
 		@include spread-value(font-size, $font-size-h3-small, $font-size-h3);
-		@include spread-value(margin-bottom, 10px, 25px); //equivalent 20px -> 30px
+		@include spread-value(margin-bottom, 20px, 30px);
 	}
 	.post-meta {
-		@include spread-value(margin-bottom, 15px, 15px); // equivalent 20 -> 30px
+		@include spread-value(margin-bottom, 20px, 30px);
 		p {
-			@include spread-value(margin-bottom, 10px, 15px); // equivalent 20 -> 30px
+			@include spread-value(margin-bottom, 20px, 30px);
 		
 			padding-left: 35px;
 			position: relative;
@@ -105,11 +105,11 @@
 		}
 	}
 	.blog-image {
-		@include spread-value(margin-bottom, 18px, 25px); // equivalent 20 -> 30px
+		@include spread-value(margin-bottom, 20px, 30px); 
 	}
 	.cms-content {
-		@include spread-value(padding-bottom, 25px, 50px); // equivalent 30 -> 50px
-		@include spread-value(margin-bottom, 20px, 45px); // equivalent 30 -> 50px	
+		@include spread-value(padding-bottom, 30px, 50px);
+		@include spread-value(margin-bottom, 30px, 50px);
 		border-bottom: 1px solid #d9d9d9;
 
 		> *:last-child {
@@ -117,23 +117,23 @@
 		}
 	}
 	.widget-tags {
-		@include spread-value(padding-bottom, 25px, 50px); // equivalent 30 -> 50px
-		@include spread-value(margin-bottom, 25px, 45px); // equivalent 30 -> 50px	
+		@include spread-value(padding-bottom, 30px, 50px);
+		@include spread-value(margin-bottom, 30px, 50px);	
 		border-bottom: 1px solid #d9d9d9;	
 	}
 	.share-links-wrapper {
-		@include spread-value(padding-bottom, 30px, 50px); // equivalent 30 -> 50px
-		@include spread-value(margin-bottom, 25px, 45px); // equivalent 30 -> 50px	
+		@include spread-value(padding-bottom, 30px, 50px);
+		@include spread-value(margin-bottom, 30px, 50px);	
 		border-bottom: 1px solid #d9d9d9;	
 	}
 	.author {
-		@include spread-value(padding-bottom, 25px, 50px); // equivalent 30 -> 50px
-		@include spread-value(margin-bottom, 25px, 45px); // equivalent 30 -> 50px	
+		@include spread-value(padding-bottom, 30px, 50px); 
+		@include spread-value(margin-bottom, 30px, 50px); 	
 		border-bottom: 1px solid #d9d9d9;	
 	}
 	#comments {
-		@include spread-value(padding-bottom, 15px, 35px); // equivalent 30 -> 50px
-		@include spread-value(margin-bottom, 25px, 45px); // equivalent 30 -> 50px	
+		@include spread-value(padding-bottom, 30px, 50px); 
+		@include spread-value(margin-bottom, 30px, 50px); 	
 		border-bottom: 1px solid #d9d9d9;	
 	}
 }
@@ -280,7 +280,7 @@
 .author {
 	h3 {
 		@include spread-value(font-size, $font-size-h3-small, $font-size-h3);
-		@include spread-value(margin-bottom, 20px, 30px); // equivalent 20 -> 30px	
+		@include spread-value(margin-bottom, 20px, 30px);
 		padding-left: 35px;
 		position: relative;
 
@@ -302,7 +302,7 @@
 
 .author-list {
 	.author {
-		@include spread-value(margin-top, 30px, 50px); // equivalent 30 -> 50px	
+		@include spread-value(margin-top, 30px, 50px);
 
 	}
 	> *:first-child + .author {

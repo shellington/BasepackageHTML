@@ -33,9 +33,11 @@
                 <h1 class="page-header">Authors</h1>
 
                 <section class="author media" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
-
+                    
                     <div class="photo media-left">
-                        <a href=""><img src="https://placeimg.com/120/120/animals" itemprop="image" alt="alt" class="img-responsive media-object" /></a>
+                        <a href="">
+                            <img class="gravatar media-object" itemprop="image" alt="alt" src="http://placehold.it/65X65" />
+                        </a>
                     </div>
 
                     <div class="bio media-body">
@@ -73,7 +75,7 @@
                         </div>
 
                     </div>
-                </section>
+                </section> 
                 
                 <div class="author-posts" itemscope="itemscope" itemtype="http://schema.org/Blog">
                     <meta itemprop="name" content="Blog" />
@@ -83,7 +85,7 @@
                     <h4>John Doe has written 2 posts</h4>
 
                     <div class="row blog-listing">
-                        <article class="col-ms-6 blog-post-summary wow fadeInUp">
+                        <article class="col-ms-6 blog-post-summary wow fadeIn">
                             <a class="image" href="">
                                 <img src="http://placehold.it/750x710" class="img-responsive" alt="">                         
                             </a>
@@ -97,7 +99,7 @@
                                 <a title="" href="" class="read-more-link">Read More <i class="fa fa-chevron-circle-right "></i></a>
                             </div>         
                         </article>
-                        <article class="col-ms-6 blog-post-summary wow fadeInUp">
+                        <article class="col-ms-6 blog-post-summary wow fadeIn">
                             <a class="image" href="">
                                 <img src="http://placehold.it/750x710" class="img-responsive" alt="">                         
                             </a>
@@ -111,7 +113,7 @@
                                 <a title="" href="" class="read-more-link">Read More <i class="fa fa-chevron-circle-right "></i></a>
                             </div>         
                         </article>
-                        <article class="col-ms-6 blog-post-summary wow fadeInUp">                        
+                        <article class="col-ms-6 blog-post-summary wow fadeIn">                        
                             <div class="text">
                                 <h3><a href="">An article that has no header image</a></h3>    
                                 <div class="post-meta">
@@ -185,9 +187,9 @@
 
         <script src="/BasepackageHTML/scripts/plugins/require.js"></script>
         <script>
-        require(['/BasepackageHTML/scripts/app'], function () {
+            require(['/BasepackageHTML/scripts/app'], function () {
 
-        });
+            });
         </script>
     </body>
     </html>

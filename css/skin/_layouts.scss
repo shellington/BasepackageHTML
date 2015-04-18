@@ -1,11 +1,27 @@
 /* Table of Contents
 ==================================================
     
-    #Table layout
-    #layout
+    #Layout
+    #Table layout    
+    #fluid layouts
  
    ==================================================
 */
+
+
+/* ==========================================================================
+#Layout
+========================================================================== */
+
+.main-col,
+.sidebar {
+	@include spread-value(margin-top, 20px, 30px); //equivalent 30px -> 50px
+}
+.sidebar {
+	.widget:last-child {
+		margin-bottom: 0;
+	}
+}
 
 /* ==========================================================================
 #Table layout
@@ -34,21 +50,8 @@
 }
 
 /* ==========================================================================
-#layout
+#Fluid layouts
 ========================================================================== */
-
-.main-col,
-.sidebar {
-	@include spread-value(margin-top, 25px, 40px); //equivalent 30px -> 50px
-}
-.sidebar {
-	.widget:first-child {
-		margin-top: 9px;
-	}
-	.widget:last-child {
-		margin-bottom: 0;
-	}
-}
 
 /* fluid full-width rows e.g. @ home study section */
 .fluid-row {
@@ -61,16 +64,6 @@
 		&.border {
 			padding:0 1px !important;
 		}
-	}
-}
-
-.padded-text {	
-	.text {
-		background-color: #f6f6f6;
-		@include spread-value(padding-top, 25px, 40px); //equivalent 30px -> 50px
-		@include spread-value(padding-bottom, 25px, 45px); //equivalent 30px -> 50px
-		@include spread-value(padding-left, 15px, 50px); //equivalent 20px -> 50px
-		@include spread-value(padding-right, 15px, 50px); //equivalent 20px -> 50px
 	}
 }
 
