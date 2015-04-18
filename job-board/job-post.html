@@ -420,9 +420,9 @@
 
 
             </section>
-            <aside class="col-md-3 col-sm-4 sidebar">
+            <aside class="col-md-3 col-sm-4 sidebar js-sticky">
 
-                <div class="js-affix">
+                <div class="">
                     
                     <p><a href="#apply-now" class="btn btn-primary btn-block">Apply now</a></p>
                     <p><strong>Job Reference:</strong> HDABC1</p>
@@ -530,8 +530,13 @@
     <script src="/BasepackageHTML/scripts/plugins/require.js"></script>
     <script>
         require(['/BasepackageHTML/scripts/app.js'], function () {
+
+            require(['sticky'], function () {
+                $('.js-sticky').stickyfloat({ duration: 400 });
+            });
+
             /*
-            FROM BASE PACKAGE
+            FROM BASE PACKAGE ??
 
             require(['jobboard'], function () {
             })  

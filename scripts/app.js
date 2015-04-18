@@ -21,7 +21,8 @@ require.config({
     "isotope": "plugins/jquery.isotope.min",
     "imagesLoaded": "plugins/jquery.imagesloaded.pkgd.min",
     "bridget": "plugins/jquery.bridget",
-    "magnific": "plugins/jquery.magnific-popup.min"
+    "magnific": "plugins/jquery.magnific-popup.min",
+    "sticky": "plugins/stickyfloat.min"
   },
   shim: {
     "jquery": {
@@ -85,6 +86,9 @@ require.config({
       "deps": ["jquery", "bridget", "imagesLoaded"]
     },
     "magnific": {
+      "deps": ["jquery"]
+    },
+    "sticky": {
       "deps": ["jquery"]
     }
   }
