@@ -37,14 +37,14 @@
 		<div class="row">
 			<section class="col-sm-12 cms-content">						
 				<h1>Yeoman Generator</h1>
-				<p>We have a yeoman generator set up called 'ph-generator'</p>
+				<p>We have a yeoman generator set up called 'generator-ph'</p>
 				<p>Currently it is set to install a base package of files to start a site build from. The following are pulled in:</p>
 				<p><img src="/BasepackageHTML/guides/images/yeoman-basepackage.jpg" /></p>				
 				
-				<h3>Steps to install our ph generator</h3>
+				<h3>Steps to install our generator-ph</h3>
 				<p>...</p>
 				
-				<h3>To run generator ph when starting a build:</h3>
+				<h3>To run generator-ph when starting a build:</h3>
 				<ul>
 					<li>Create your build folder locally e.g. buildname_html</li>
 					<li>Using cmd change into this directory</li>
@@ -56,10 +56,10 @@
 				
 
 				<h3>Steps to update our ph generator</h3>
-				<p>To work on the ph-generator you will need to clone it from our <a target="_blank" href="https://github.com/PhCreative/generator-ph">generator-ph</a> repo to your machine locally. Then make any edits as necessarry</p>
+				<p>To work on the generator-ph you will need to clone it from our <a target="_blank" href="https://github.com/PhCreative/generator-ph">generator-ph</a> repo to your machine locally.</p>
 				<p>While workiong locally to run the generator and check what it is doing based on your edits do the following: (<a target="_blank" href="http://elegantcode.com/2011/12/16/taking-baby-steps-with-node-js-linking-local-packages-with-npm/">source artice</a>)</p>
 				<ul>
-					<li>using cmd cd into your generator local clone and enter 'npm link'</li>
+					<li>using cmd cd into your generator-ph local clone and enter 'npm link'</li>
 					<li>go to your local 'test folder' that you want to run the generator on and enter 'npm link generator-ph'</li>
 					<li>then run 'yo ph' on the test folder</li>
 					<li>Important: remember to unlink both folders after you've finished testing ('npm unlink' and 'npm unlink generator-ph' in the respective folders as outlined above).</li>
@@ -68,7 +68,7 @@
 				<p>Finally to publish these changes to the actual ph-generator you need to:</p>
 				<ul>
 					<li>Change the version number in generator-ph/package.json</li>
-					<li>using cmd change directory to your local clone of the ph-generator and enter 'npm publish'*</li>
+					<li>using cmd change directory to your local clone of the generator-ph and enter 'npm publish'*</li>
 					<li><small>*you do need to have publishing permissions for this command to work. <a target="_blank" href="https://www.npmjs.com/">Sign up for an account</a> and then Michelle or Heather can add you - just tell them the email address you used for signing up.</small></li>
 					<li>Once published you will need to open cmd and run 'npm install -g generator-ph' - <strong>Important: make sure to notify the team as they will all need to do this step too in order to get your updates!</strong></li>
 				</ul>
